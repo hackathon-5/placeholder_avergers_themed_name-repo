@@ -131,7 +131,7 @@ ion-view ion-content div.scroll h1 {
     border-radius: 5px;
     font-size: 18px;
     border: none;
-    margin-top: 10px;
+    margin-top: 30px;
     width: 100%;
   }
 
@@ -150,9 +150,12 @@ ion-view ion-content div.scroll h1 {
   }
 
   .profile-content label {
-      text-align: left;
-      margin-top: 20px;
-      font-style: normal !important;
+    font-size: 20px !important;
+    line-height: 25px;
+    color: #444;
+    text-shadow: 1px 1px 1px #fff;
+    text-align: left;
+    margin-bottom: 10px !important;
   }
 
   .profile-pic {
@@ -224,6 +227,7 @@ ion-view ion-content div.scroll h1 {
     font-size: 18px;
     left: 3.5%;
     color: #444;
+    font-style: italic;
   }
 
   .direction.second {
