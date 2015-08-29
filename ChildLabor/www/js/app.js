@@ -52,6 +52,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'ProfileCtrl'
   })
 
+  .state('currentOpportunities', {
+    url: '/currentOpportunities',
+    templateUrl: 'templates/currentOpportunities.html',
+    controller: 'currentOpportunitiesCtrl'
+  })
+
+  .state('kidsBalance', {
+    url: '/kidsBalance',
+    templateUrl: 'templates/kidsBalance.html',
+    controller: 'kidsBalanceCtrl'
+  })
+
+  .state('parentsBalance', {
+    url: '/parentsBalance',
+    templateUrl: 'templates/parentsBalance.html',
+    controller: 'parentsBalanceCtrl'
+  })
+
   .state('browse', {
       url: '/browse',
       templateUrl: 'templates/browse.html'
