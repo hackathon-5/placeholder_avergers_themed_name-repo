@@ -9,7 +9,7 @@
     <span>Child Labor</span>
     <p class="direction">Person</p>
     <p class="direction second">Job</p>
-    <p class="direction third">Pay</p>
+    <p class="direction third">Pay/Hrs</p>
     <img class="arrow" src="../img/arrow.png" />
     <img class="arrow second" src="../img/arrow.png" />
     <img class="arrow third" src="../img/arrow.png" />
@@ -18,7 +18,7 @@
       <ion-item ng-repeat="job in jobs" href="#/jobdescription/{{job.id}}">
         <img class="job-img" ng-src="{{job.img}}" />
         <p class="job-name">{{job.jobname}}</p>
-        <p class="job-pay">{{job.hours}}/{{job.pay}}</p>
+        <p class="job-pay">{{job.pay}}/{{job.hours}}</p>
       </ion-item>
     </ion-list>
   </ion-content>
