@@ -1,9 +1,13 @@
-<ion-view view-title="Current Commitments">
+<ion-view view-title="Current Collaborations">
     <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
     </ion-nav-buttons>
     <ion-content>
-
+        <ion-list>
+            <ion-item ng-repeat="com in commits">
+                {{com}}
+            </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>

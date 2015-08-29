@@ -51,24 +51,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/profile.html',
     controller: 'ProfileCtrl'
   })
+  .state('addOpportunity', {
+    url: '/addOpportunity',
+    templateUrl: 'templates/newOpportunity.html',
+    controller: 'AddOpportunityCtrl'
+  })
 
-  .state('currentOpportunities', {
-    url: '/currentOpportunities',
-    templateUrl: 'templates/currentOpportunities.html',
-    controller: 'currentOpportunitiesCtrl'
+  .state('currentCollaborations', {
+    url: '/currentCollaborations',
+    templateUrl: 'templates/currentCollaborations.html',
+    controller: 'CurrentCollaborationsCtrl'
   })
 
   .state('kidsBalance', {
     url: '/kidsBalance',
     templateUrl: 'templates/kidsBalance.html',
-    controller: 'kidsBalanceCtrl'
+    controller: 'KidsBalanceCtrl'
   })
 
-  .state('parentsBalance', {
-    url: '/parentsBalance',
-    templateUrl: 'templates/parentsBalance.html',
-    controller: 'parentsBalanceCtrl'
-  })
 
   .state('browse', {
       url: '/browse',

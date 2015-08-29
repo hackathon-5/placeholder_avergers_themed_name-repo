@@ -29,8 +29,17 @@ angular.module('starter.controllers', [])
       'description': 'I would love to help some w/ their programming side projects.'
     }
   };
-  window.localStorage.adultAccountInfo = JSON.stringify(adultData);
-  window.localStorage.childAccountInfo = JSON.stringify(childData);
+
+ var commitments = {
+        1:{
+            'date' : 'sdf'
+
+        }
+ };
+
+window.localStorage.commitments = JSON.stringify(commitments);
+window.localStorage.adultAccountInfo = JSON.stringify(adultData);
+window.localStorage.childAccountInfo = JSON.stringify(childData);
 
   var jobs = {
       1 : {
@@ -196,16 +205,18 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('currentOpportunitiesCtrl', function($scope, $state) {
+.controller('CurrentCollaborationsCtrl', function($scope) {
+        var commitments = window.localStorage.commitments;
+        if(commitments) {
+            $scope.commits = angular.fromJson(commitments);
+        }
+        return [];
+    })
+
+.controller('KidsBalanceCtrl', function($scope, $state) {
 
 })
-.controller('kidsBalanceCtrl', function($scope, $state) {
 
-})
-
-.controller('parentsBalanceCtrl', function($scope, $state) {
-
-})
 
 .controller('JobDescriptionCtrl', function($scope, $stateParams) {
   console.log($stateParams.jobId);
