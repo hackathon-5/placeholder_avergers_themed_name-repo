@@ -12,11 +12,12 @@
       <input ng-model="data.hours" type="number" placeholder="Hours" />
       <input ng-model="data.pay" type="number" placeholder="Pay per hour" />
       <input ng-model="data.ageRestriction" type="number" placeholder="Age restriction" />
-      <label>Select Category</label>
-      <select name="categorySelect" ng-model="data.category">
+      <label class="select-category">Select Category</label>
+      <select class="category-select" name="categorySelect" ng-model="data.category">
         <option ng-repeat="option in categories" value="{{option.id}}">{{option.id}}</option>
       </select>
-      <input ng-model="data.extraInfo" type="textarea" placeholder="Additional Infomation" />
+      <label class="select-category additional">Additional Information</label>
+      <textarea class="additional-info" ng-model="data.extraInfo" type="textarea"></textarea>
     </div>
     <div>
       <button class="register-page-btn" ng-click="addNewOpportunity()">Add New Opportunity</button>

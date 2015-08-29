@@ -15,7 +15,7 @@ angular.module('starter.controllers', [])
   'address':'1400 South St',
   'email':'ronak@gmail.com',
   'password':'pass4ron',
-  'img':'../img/default-adult-img.png',
+  'img':'../img/person_2.png',
   'description': 'I love working on cars during the weekend.'
 },
   'nations':{
@@ -24,7 +24,7 @@ angular.module('starter.controllers', [])
       'address':'1698 Summer Sty',
       'email':'brian.nations@gmail.com',
       'password':'pass4brian',
-      'img':'../img/default-adult-img.png',
+      'img':'../img/person_1.png',
       'description': 'I love to teach css'
   },
   'barrineau':{
@@ -33,7 +33,7 @@ angular.module('starter.controllers', [])
       'address':'1251 Springhill Rd',
       'email':'ryan.barrineau@gmail.com',
       'password':'pass4ryan',
-      'img':'../img/default-adult-img.png',
+      'img':'../img/person_3.png',
       'description': 'I try to tackle a home repair job every weekend'
   },
   'forest':{
@@ -42,7 +42,7 @@ angular.module('starter.controllers', [])
       'address':'920 King Street',
       'email':'forrest.short@gmail.com',
       'password':'pass4forrest',
-      'img':'../img/default-adult-img.png',
+      'img':'../img/person_4.png',
       'description': 'I find baking to be both therapeutic and stimulating'
   },
   'dexter':{
@@ -51,7 +51,7 @@ angular.module('starter.controllers', [])
       'address':'920 King Street',
       'email':'dexter@gmail.com',
       'password':'pass4dex',
-      'img':'../img/default-adult-img.png',
+      'img':'../img/person_4.png',
       'description': 'I find baking to be both therapeutic and stimulating'
   }
 };
@@ -265,154 +265,175 @@ angular.module('starter.controllers', [])
       }
  };
   var jobs = {
-      1 : {
-          'id': 11,
-          'user': 'dexter',
-          'img':'../img/person_4.png',
-          'jobname': 'Change oil in 1998 VW Golf',
-          'pay': 10.00,
-          'category': 'automotive',
-          'address': '4807 Boulevard Lane',
-          'hours': 2,
-          'extraInfo': 'Wear clothes that can get dirty',
-          'ageRestriction': 'none',
-          'startTime':'2pm',
-          'startDate':'08/30'
-      },
-      2:{
-          'id'              : 12,
-          'user'            : 'ratastkoskr',
-          'img'             :'../img/person_2.png',
-          'jobname'         : 'Replace Shingle',
-          'pay'             : 15.00,
-          'category'        : 'home repair',
-          'address'         : '3922 Fort Drive',
-          'hours'           : 3,
-          'extraInfo'      : 'We will not be working high on a roof this.',
-          'ageRestriction' : 16,
-          'startTime':'2pm',
-          'startDate':'09/30'
-      },
-      3:{
-          'id'              : 13,
-          'user'            : 'barrineau',
-          'img'             :'../img/person_3.png',
-          'jobname'         : 'Make webpage',
-          'pay'             : 10.00,
-          'category'        : 'computers',
-          'address'         : '145 Williman St',
-          'hours'           : 3,
-          'extraInfo'      : 'I need a webpage to show off my cats',
-          'ageRestriction' : 'none',
-          'startTime':'4pm',
-          'startDate':'09/30'
-      },
-      4: {
-          'id'              : 14,
-          'user'            : 'forrest',
-          'img'             :'../img/person_4.png',
-          'jobname': 'Mow lawn',
-          'pay': 10.00,
-          'category': 'yard work',
-          'address': '145 Williman St',
-          'hours': 1,
-          'extraInfo': 'I need a webpage to show off my cats',
-          'ageRestriction': 'none',
-          'startTime':'10:00am',
-          'startDate':'09/02'
-      },
-      5: {
-          'id'              : 15,
-          'user'            : 'ratastkoskr',
-          'img'             :'../img/person_2.png',
-          'jobname': 'Change Lightswitch',
-          'pay': 8.00,
-          'category': 'electrical',
-          'address': '1251 Springhill rd',
-          'hours':.5,
-          'extraInfo': 'I will turn all power off and before we take the switch apart',
-          'ageRestriction': '16',
-          'startTime':'8am',
-          'startDate':'09/30'
-      },
-      6: {
-          'id'              : 16,
-          'user'            : 'ratastkoskr',
-          'img'             :'../img/person_2.png',
-          'jobname': 'change lighbulb',
-          'pay': 5.00,
-          'category': 'electrical',
-          'address': '1251 Springhill rd',
-          'hours':.5,
-          'extraInfo': 'I have a lightbulb that I cannot seam to reach',
-          'ageRestriction': 'none',
-          'startTime':'9am',
-          'startDate':'09/30'
-      },
-      7: {
-          'id'              : 17,
-          'user'            : 'nations',
-          'img'             :'../img/person_1.png',
-          'jobname': 'clean kitchen',
-          'pay': 10.00,
-          'category': 'cleaning',
-          'address': '4455 San Socci',
-          'hours': 1,
-          'extraInfo': 'I just need someone to mop my floor',
-          'ageRestriction': 'none',
-          'startTime':'9:30',
-          'startDate':'11/22'
-      },
-      8: {
-          'id'              : 18,
-          'user'            : 'barrineau',
-          'img'             :'../img/person_3.png',
-          'jobname': 'clean kitchen',
-          'pay': 10.00,
-          'category': 'cleaning',
-          'address': '4455 San Socci',
-          'hours': 1,
-          'extraInfo': 'I just need someone to mop my floor',
-          'ageRestriction': 'none',
-          'startTime':'9:30',
-          'startDate':'11/22'
-      },
-      9: {
-          'id'              : 19,
-          'user'            : 'forrest',
-          'img'             :'../img/person_4.png',
-          'jobname': 'clean garage out',
-          'pay': 35.00,
-          'category': 'cleaning',
-          'address': '2568 Saint street',
-          'hours': 5,
-          'extraInfo': 'My garage is full and needs to be cleaned out',
-          'ageRestriction': 'none',
-          'startTime':'10:00am',
-          'startDate':'09/11'
-      },
-      10: {
-          'id'              : 20,
-          'user'            : 'dexter',
-          'img'             :'../img/person_4.png',
-          'jobname': 'wash boat',
-          'pay': 10.00,
-          'category': 'cleaning',
-          'address': '2568 Huger st',
-          'hours': 1,
-          'extraInfo': 'I would like for someone to wash my boat',
-          'ageRestriction': 'none',
-          'startTime':'3:00pm',
-          'startDate':'09/05'
-      }
-    };
+            1 : {
+                'id': 1,
+                'user': 'test',
+                'img':'./img/person_1.png',
+                'jobname': 'Change oil in 1998 VW Golf',
+                'pay': 10.00,
+                'category': 'automotive',
+                'address': '4807 Boulevard Lane',
+                'hours': 2,
+                'extraInfo': 'Wear clothes that can get dirty',
+                'ageRestriction': 'none',
+                'startTime':'2pm',
+                'startDate':'08/30'
+            },
+            2:{
+                'id'              : 12,
+                'user'            : 'ratastkoskr',
+                'img'             :'../img/person_2.png',
+                'jobname'         : 'Replace Shingle',
+                'pay'             : 15.00,
+                'category'        : 'home repair',
+                'address'         : '3922 Fort Drive',
+                'hours'           : 3,
+                'extraInfo'      : 'We will not be working high on a roof this.',
+                'ageRestriction' : 16,
+                'startTime':'2pm',
+                'startDate':'09/30'
+            },
+            3:{
+                'id'              : 13,
+                'user'            : 'barrineau',
+                'img'             :'../img/person_3.png',
+                'jobname'         : 'Make webpage',
+                'pay'             : 10.00,
+                'category'        : 'computers',
+                'address'         : '145 Williman St',
+                'hours'           : 3,
+                'extraInfo'      : 'I need a webpage to show off my cats',
+                'ageRestriction' : 'none',
+                'startTime':'4pm',
+                'startDate':'09/30'
+            },
+            4: {
+                'id'              : 14,
+                'user'            : 'forrest',
+                'img'             :'../img/person_4.png',
+                'jobname': 'Mow lawn',
+                'pay': 10.00,
+                'category': 'yard work',
+                'address': '145 Williman St',
+                'hours': 1,
+                'extraInfo': 'I need a webpage to show off my cats',
+                'ageRestriction': 'none',
+                'startTime':'10:00am',
+                'startDate':'09/02'
+            },
+            5: {
+                'id'              : 15,
+                'user'            : 'ratastkoskr',
+                'img'             :'../img/person_2.png',
+                'jobname': 'Change Lightswitch',
+                'pay': 8.00,
+                'category': 'electrical',
+                'address': '1251 Springhill rd',
+                'hours':.5,
+                'extraInfo': 'I will turn all power off and before we take the switch apart',
+                'ageRestriction': '16',
+                'startTime':'8am',
+                'startDate':'09/30'
+            },
+            6: {
+                'id'              : 16,
+                'user'            : 'ratastkoskr',
+                'img'             :'../img/person_2.png',
+                'jobname': 'change lighbulb',
+                'pay': 5.00,
+                'category': 'electrical',
+                'address': '1251 Springhill rd',
+                'hours':.5,
+                'extraInfo': 'I have a lightbulb that I cannot seam to reach',
+                'ageRestriction': 'none',
+                'startTime':'9am',
+                'startDate':'09/30'
+            },
+            7: {
+                'id'              : 17,
+                'user'            : 'nations',
+                'img'             :'../img/person_1.png',
+                'jobname': 'clean kitchen',
+                'pay': 10.00,
+                'category': 'cleaning',
+                'address': '4455 San Socci',
+                'hours': 1,
+                'extraInfo': 'I just need someone to mop my floor',
+                'ageRestriction': 'none',
+                'startTime':'9:30',
+                'startDate':'11/22'
+            },
+            8: {
+                'id'              : 18,
+                'user'            : 'barrineau',
+                'img'             :'../img/person_3.png',
+                'jobname': 'clean kitchen',
+                'pay': 10.00,
+                'category': 'cleaning',
+                'address': '4455 San Socci',
+                'hours': 1,
+                'extraInfo': 'I just need someone to mop my floor',
+                'ageRestriction': 'none',
+                'startTime':'9:30',
+                'startDate':'11/22'
+            },
+            9: {
+                'id'              : 19,
+                'user'            : 'forrest',
+                'img'             :'../img/person_4.png',
+                'jobname': 'clean garage out',
+                'pay': 35.00,
+                'category': 'cleaning',
+                'address': '2568 Saint street',
+                'hours': 5,
+                'extraInfo': 'My garage is full and needs to be cleaned out',
+                'ageRestriction': 'none',
+                'startTime':'10:00am',
+                'startDate':'09/11'
+            },
+            10: {
+                'id'              : 20,
+                'user'            : 'dexter',
+                'img'             :'../img/person_4.png',
+                'jobname': 'wash boat',
+                'pay': 10.00,
+                'category': 'cleaning',
+                'address': '2568 Huger st',
+                'hours': 1,
+                'extraInfo': 'I would like for someone to wash my boat',
+                'ageRestriction': 'none',
+                'startTime':'3:00pm',
+                'startDate':'09/05'
+            }
+        };
 
+ var dollaDollaBillsYall = {
+    testChild:{
+      week1:12,
+      week2:13,
+      week3:2,
+      week4:14,
+      august:41,
+      july:56,
+      june:68,
+      may:45,
+      april:40,
+      march:38,
+      febuary:39,
+      january:43,
+      december:58,
+      november:29,
+      october:47,
+      september:32,
+      year:536
+    }
+ };
+    window.localStorage.dollaDollaBillsYall = JSON.stringify(dollaDollaBillsYall);
     window.localStorage.commitments = JSON.stringify(commitments);
     window.localStorage.adultAccountInfo = JSON.stringify(adultData);
     window.localStorage.childAccountInfo = JSON.stringify(childData);
     window.localStorage.jobs = JSON.stringify(jobs);
     window.localStorage.jobsCount = 4;
-
 
     //Checking if user is logged in
     //So as to display the correct side menu options
@@ -479,7 +500,7 @@ angular.module('starter.controllers', [])
     window.localStorage.userType = "";
     window.localStorage.userName = "";
     $rootScope.isNotLoggedIn = true;
-    $state.go("login");
+    $state.go("opportunities");
     };
 })
 
@@ -592,11 +613,12 @@ angular.module('starter.controllers', [])
 })
 
 .controller('KidsBalanceCtrl', function($scope, $state) {
-
+  $scope.dollaDollaBillsYall = JSON.parse(window.localStorage.dollaDollaBillsYall);
+  $scope.currentBillsYall = $scope.dollaDollaBillsYall[window.localStorage.userName];
 })
 
 
-.controller('JobDescriptionCtrl', function($scope, $stateParams) {
+.controller('JobDescriptionCtrl', function($scope, $stateParams, $state) {
   console.log($stateParams.jobId);
   $scope.info = JSON.parse(window.localStorage.jobs)[$stateParams.jobId];
 
@@ -615,11 +637,13 @@ angular.module('starter.controllers', [])
     delete $scope.jobs[$stateParams.jobId];
     window.localStorage.jobs = JSON.stringify($scope.jobs);
 
+    $state.go('currentCollaborations');
+
   };
 
 })
 
-.controller('SpecificCollabCtrl', function($scope, $stateParams) {
+.controller('SpecificCollabCtrl', function($scope, $stateParams, $state) {
   $scope.collabInfo = JSON.parse(window.localStorage.commitments);
   $scope.userCollabInfo = $scope.collabInfo[window.localStorage.userName][$stateParams.collabId];
 
@@ -633,6 +657,7 @@ angular.module('starter.controllers', [])
     delete $scope.collabInfo[window.localStorage.userName][$stateParams.collabId];
     window.localStorage.jobs = JSON.stringify($scope.jobs);
     window.localStorage.commitments = JSON.stringify($scope.collabInfo);
+    $state.go('opportunities');
   };
 
 });

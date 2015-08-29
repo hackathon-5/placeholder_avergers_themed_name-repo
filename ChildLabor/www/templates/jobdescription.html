@@ -4,11 +4,19 @@
         </button>
     </ion-nav-buttons>
     <ion-content>
-        <ion-list>
-            <ion-item ng-repeat="(infKey, infValue) in info">
-                <div>{{infKey}}-{{infValue}}</div>
-            </ion-item>
-            <button ng-click="collaborate()" ng-show="isChild" >Collaborate</button>
+        <ion-list class="info-container">
+
+            <img class="info-img" ng-src="{{info.img}}">
+            <label class="name">{{info.user}}</label>
+            <label>{{info.jobname}}</label>
+            <label>${{info.pay}}/{{info.hours}}</label>
+            <label>{{info.category}}</label>
+            <label>{{info.address}}</label>
+            <label>{{info.extraInfo}}</label>
+            <label>{{info.ageRestriction}}</label>
+            <label>{{info.startDate}}-{{info.startTime}}</label>
+
+            <button class="collab-btn" ng-click="collaborate()" ng-show="isChild" >Collaborate</button>
         </ion-list>
     </ion-content>
 </ion-view>
