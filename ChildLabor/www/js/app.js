@@ -66,6 +66,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: '/playlists/:playlistId',
     templateUrl: 'templates/playlist.html',
     controller: 'PlaylistCtrl'
+  })
+
+  .state('jobdescription', {
+    url: '/jobdescription/:jobId',
+    templateUrl: 'templates/jobdescription.html',
+        controller: 'JobDescriptionCtrl'
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');

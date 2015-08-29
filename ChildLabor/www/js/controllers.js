@@ -192,6 +192,9 @@ angular.module('starter.controllers', [])
   }
   return [];
 })
+.controller('JobDescriptionCtrl', function($scope, $stateParams) {
+    console.log($stateParams.jobId);
+})
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+  });
