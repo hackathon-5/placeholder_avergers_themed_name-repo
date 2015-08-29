@@ -236,7 +236,7 @@ ion-view ion-content div.scroll h1 {
 
   .direction.third {
     left: auto;
-    right: 5.5%;
+    right: 2.5%;
   }
 
   .main_banner {
@@ -290,4 +290,25 @@ ion-view ion-content div.scroll h1 {
     height: 150px;
     border-radius: 5px;
     margin-bottom: 5px;
+    padding: 15px;
+  }
+
+  .current-collab ion-item {
+    border-radius: 20px;
+    border: none;
+  }
+
+  .opp-content {
+    background: #555;
+  }
+
+  .cancel-collab {
+    background: #ed1b2f;
+    padding: 10px 12%;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    margin-top: 30px;
+    width: 100%;
   }
