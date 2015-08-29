@@ -37,7 +37,7 @@ angular.module('starter.controllers', [])
       1:{
         'id'              : 2,
         'user'            : 'test',
-        'img'             :'./img/ionic.png',
+        'img'             :'./img/default-adult-img.png',
         'jobname'         : 'Replace Shingle',
         'pay'             : 15.00,
         'category'        : 'home repair',
