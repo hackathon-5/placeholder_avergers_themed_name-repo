@@ -44,6 +44,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/login.html',
     controller: 'LoginCtrl'
   })
+
+  .state('logout', {
+    url: '/logout',
+    cache:false,
+    templateUrl: 'templates/logout.html',
+    controller: 'LogoutCtrl'
+  })
+
   .state('register', {
     url: '/register',
     cache:false,
