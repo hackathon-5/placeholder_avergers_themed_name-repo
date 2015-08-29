@@ -51,6 +51,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/profile.html',
     controller: 'ProfileCtrl'
   })
+  .state('addOpportunity', {
+    url: '/addOpportunity',
+    templateUrl: 'templates/newOpportunity.html',
+    controller: 'AddOpportunityCtrl'
+  })
 
   .state('browse', {
       url: '/browse',

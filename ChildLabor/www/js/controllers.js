@@ -192,6 +192,9 @@ angular.module('starter.controllers', [])
   }
   return [];
 })
+.controller('AddOpportunityCtrl', function($scope, $state) {
+
+})
 .controller('JobDescriptionCtrl', function($scope, $stateParams) {
     console.log($stateParams.jobId);
 })
