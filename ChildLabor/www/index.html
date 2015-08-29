@@ -43,13 +43,13 @@
             <ion-item menu-close href="#/opportunities">
               Opportunities
             </ion-item>
-            <ion-item ng-show="isAdult"menu-close href="#/addOpportunity">
+            <ion-item ng-show="isAdult" menu-close href="#/addOpportunity">
               List New Opportunities
             </ion-item>
-            <ion-item menu-close href="#/currentCollaborations">
+            <ion-item ng-show="isChild" menu-close href="#/currentCollaborations">
               Current Collaborations
             </ion-item>
-            <ion-item ng-show="isChild"menu-close href="#/kidsBalance">
+            <ion-item ng-show="isChild" menu-close href="#/kidsBalance">
               Money Earned
             </ion-item>
           </ion-list>

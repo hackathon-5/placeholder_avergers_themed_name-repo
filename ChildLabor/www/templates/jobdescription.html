@@ -1,13 +1,14 @@
-<ion-view view-title="Jobdescription">
+<ion-view view-title="Job Description">
     <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
     </ion-nav-buttons>
     <ion-content>
         <ion-list>
-            <ion-item ng-repeat="inf in info">
-                <div>{{inf}}</div>
+            <ion-item ng-repeat="(infKey, infValue) in info">
+                <div>{{infKey}}-{{infValue}}</div>
             </ion-item>
+            <button ng-click="collaborate()" ng-show="isChild" >Collaborate</button>
         </ion-list>
     </ion-content>
 </ion-view>
