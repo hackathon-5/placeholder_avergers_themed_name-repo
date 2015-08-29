@@ -20,8 +20,9 @@ angular.module('starter.controllers', [])
     }
   };
 
-    var jobs = {
-            1 : {
+        var jobs = {
+            1: {
+                'id': 1,
                 'jobname': 'Change oil in 1998 VW Golf',
                 'pay': 10.00,
                 'category': 'automotive',
@@ -32,47 +33,47 @@ angular.module('starter.controllers', [])
                 'tools_wanted': 'none',
                 'extra_info': 'Wear clothes that can get dirty',
                 'age_restriction': 'none'
-        },
-        2:{
-            'id'              : 2,
-            'jobname'         : 'Replace Shingle',
-            'pay'             : 15.00,
-            'category'        : 'home repair',
-            'address'         : '1251 Springhill Rd',
-            'hours'           : 3,
-            'prereq'          : 'none',
-            'tools_needed'    : 'none',
-            'tools_wanted'    : 'none',
-            'extra_info'      : 'Wear clothes that can get dirty',
-            'age_restriction' : 16
-        },
-        3:{
-            'id'              : 3,
-            'jobname'         : 'Make webpage',
-            'pay'             : 20.00,
-            'category'        : 'computers',
-            'address'         : '145 Williman St',
-            'hours'           : 3,
-            'prereq'          : 'Web development',
-            'tools_needed'    : 'none',
-            'tools_wanted'    : 'none',
-            'extra_info'      : 'I need a webpage to show off my cats',
-            'age_restriction' : 'none'
-        },
-        4: {
-            'id'              : 4,
-            'jobname': 'as',
-            'pay': 20.00,
-            'category': 'computers',
-            'address': '145 Williman St',
-            'hours': 3,
-            'prereq': 'Web development',
-            'tools_needed': 'none',
-            'tools_wanted': 'none',
-            'extra_info': 'I need a webpage to show off my cats',
-            'age_restriction': 'none'
+            },
+            2: {
+                'id': 2,
+                'jobname': 'Replace Shingle',
+                'pay': 15.00,
+                'category': 'home repair',
+                'address': '1251 Springhill Rd',
+                'hours': 3,
+                'prereq': 'none',
+                'tools_needed': 'none',
+                'tools_wanted': 'none',
+                'extra_info': 'Wear clothes that can get dirty',
+                'age_restriction': 16
+            },
+            3: {
+                'id': 3,
+                'jobname': 'Make webpage',
+                'pay': 20.00,
+                'category': 'computers',
+                'address': '145 Williman St',
+                'hours': 3,
+                'prereq': 'Web development',
+                'tools_needed': 'none',
+                'tools_wanted': 'none',
+                'extra_info': 'I need a webpage to show off my cats',
+                'age_restriction': 'none'
+            },
+            4: {
+                'id': 4,
+                'jobname': 'as',
+                'pay': 20.00,
+                'category': 'computers',
+                'address': '145 Williman St',
+                'hours': 3,
+                'prereq': 'Web development',
+                'tools_needed': 'none',
+                'tools_wanted': 'none',
+                'extra_info': 'I need a webpage to show off my cats',
+                'age_restriction': 'none'
             }
-    };
+        };
 
   window.localStorage.jobs = JSON.stringify(jobs);
 
@@ -171,5 +172,9 @@ angular.module('starter.controllers', [])
   console.log($scope.user);
 })
 
-      .controller('PlaylistCtrl', function($scope, $stateParams) {
+    .controller('JobDescriptionCtrl', function($scope, $stateParams) {
+        console.log($stateParams.jobId);
+    })
+
+    .controller('PlaylistCtrl', function($scope, $stateParams) {
       });
