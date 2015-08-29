@@ -175,9 +175,10 @@ ion-view ion-content div.scroll h1 {
   }
 
   .home_banner {
-    margin-bottom: -20px;
+    margin-bottom: -10px;
     position: relative;
     background: #779FB2;
+    border-bottom: solid 5px #fff;
   }
 
   .home_banner span {
@@ -201,9 +202,10 @@ ion-view ion-content div.scroll h1 {
 
   .arrow {
     position: absolute;
-    bottom: -23%;
+    bottom: -25%;
     width: 40px !important;
-    left: 0;
+    left: 5%;
+    opacity: .6;
   }
 
   .arrow.second {
@@ -212,5 +214,52 @@ ion-view ion-content div.scroll h1 {
 
   .arrow.third {
     left: auto;
-    right: 0;
+    right: 5%;
+  }
+
+  .direction {
+    position: absolute;
+    font-family: Cedarville Cursive;
+    bottom: 14%;
+    font-size: 18px;
+    left: 3.5%;
+    color: #444;
+  }
+
+  .direction.second {
+    left: calc(50% - 13px);
+  }
+
+  .direction.third {
+    left: auto;
+    right: 5.5%;
+  }
+
+  .main_banner {
+    border-bottom: solid 5px #fff;
+  }
+
+  .job-img {
+    float: left;
+    width: 14% !important;
+    margin-bottom: 0px !important;
+    border-radius: 50%;
+  }
+
+  .job-listing p {
+    color: #fff;
+  }
+
+  .job-name {
+    width: 50%;
+    float: left;
+    margin-left: 15%;
+    margin-top: 4%;
+  }
+
+  .job-pay {
+    float: right;
+    margin-right: -13%;
+    margin-top: 4%;
+    width: 20%;
   }

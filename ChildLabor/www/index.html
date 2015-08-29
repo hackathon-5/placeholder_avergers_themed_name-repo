@@ -5,6 +5,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
+    <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500|Amatic+SC:400,700' rel='stylesheet' type='text/css'>
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -26,7 +27,7 @@
 
   <body ng-app="starter" ng-controller="AppCtrl">
     <ion-side-menus>
-      
+
 
       <ion-side-menu side="left">
         <ion-header-bar class="bar-stable">
@@ -51,6 +52,9 @@
             </ion-item>
             <ion-item ng-show="isChild"menu-close href="#/kidsBalance">
               Money Earned
+            </ion-item>
+            <ion-item ng-show="isChild"menu-close href="#">
+              Logout
             </ion-item>
           </ion-list>
         </ion-content>

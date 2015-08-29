@@ -56,7 +56,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
       1 : {
           'id': 1,
           'user': 'test',
-          'img':'../img/ionic.png',
+          'img':'../img/person_1.png',
           'jobname': 'Change oil in 1998 VW Golf',
           'pay': 10.00,
           'category': 'automotive',
@@ -70,7 +70,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
       2:{
           'id'              : 2,
           'user'            : 'test',
-          'img'             :'../img/ionic.png',
+          'img'             :'../img/person_2.png',
           'jobname'         : 'Replace Shingle',
           'pay'             : 15.00,
           'category'        : 'home repair',
@@ -84,7 +84,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
       3:{
           'id'              : 3,
           'user'            : 'test',
-          'img'             :'../img/ionic.png',
+          'img'             :'../img/person_3.png',
           'jobname'         : 'Make webpage',
           'pay'             : 20.00,
           'category'        : 'computers',
@@ -98,7 +98,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
       4: {
           'id'              : 4,
           'user'            : 'test',
-          'img'             :'../img/ionic.png',
+          'img'             :'../img/person_4.png',
           'jobname': 'as',
           'pay': 20.00,
           'category': 'computers',
