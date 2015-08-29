@@ -32,7 +32,8 @@ angular.module('starter.controllers', [])
   };
 
  var commitments = {
-        1:{
+        testChild:{
+          1:{
             'id'              : 2,
             'user'            : 'test',
             'img'             :'../img/ionic.png',
@@ -45,6 +46,8 @@ angular.module('starter.controllers', [])
             'ageRestriction' : 16,
             'startTime':'2pm',
             'startDate':'09/30'
+          },
+          currentCount:1
         }
  };
 
@@ -162,7 +165,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
     $state.go("register");
   };
 })
-.controller('RegisterCtrl', function($scope, $rootScope) {
+.controller('RegisterCtrl', function($scope, $state, $rootScope) {
   $scope.userTypes = [
       {text: "Child", value: 'child'},
       {text: "Adult", value: 'adult'}
@@ -261,12 +264,10 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
 })
 
 .controller('CurrentCollaborationsCtrl', function($scope) {
-        var commitments = window.localStorage.commitments;
-        if(commitments) {
-            $scope.commits = angular.fromJson(commitments);
-        }
-        return [];
-    })
+        $scope.commits = JSON.parse(window.localStorage.commitments);
+        $scope.childCommits = $scope.commits[window.localStorage.userName];
+
+})
 
 .controller('KidsBalanceCtrl', function($scope, $state) {
 
@@ -275,12 +276,20 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
 
 .controller('JobDescriptionCtrl', function($scope, $stateParams) {
   console.log($stateParams.jobId);
-  var allinfo = window.localStorage.jobs;
-  if(allinfo) {
-      $scope.info = angular.fromJson(allinfo)[$stateParams.jobId];
-      console.log($scope.info);
-  }
-  return [];
+  $scope.info = JSON.parse(window.localStorage.jobs)[$stateParams.jobId];
+
+  $scope.collaborate = function(){
+    $scope.currentCollabs = JSON.parse(window.localStorage.commitments);
+    $scope.usersCollabs = $scope.currentCollabs[window.localStorage.userName];
+    $scope.currentCount = +$scope.usersCollabs.currentCount;
+    $scope.currentCount = $scope.currentCount + 1;
+    $scope.usersCollabs[$scope.currentCount] = $scope.info;
+    $scope.usersCollabs.currentCount = $scope.currentCount;
+    $scope.currentCollabs[window.localStorage.userName] = $scope.usersCollabs;
+    window.localStorage.commitments = JSON.stringify($scope.currentCollabs);
+
+  };
+
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
