@@ -408,7 +408,7 @@ angular.module('starter.controllers', [])
         };
 
  var dollaDollaBillsYall = {
-    testChild:{
+    'simon':{
       week1:12,
       week2:13,
       week3:2,
@@ -426,7 +426,46 @@ angular.module('starter.controllers', [])
       october:47,
       september:32,
       year:536
-    }
+    },
+     'liam':{
+         week1:9,
+         week2:7,
+         week3:11,
+         week4:25,
+         august:5,
+         july:35,
+         june:22,
+         may:25,
+         april:35,
+         march:38,
+         febuary:39,
+         january:58,
+         december:25,
+         november:29,
+         october:32,
+         september:25,
+         year:536
+     },
+     'erin': {
+         week1:4,
+         week2:8,
+         week3:21,
+         week4:12,
+         august:8,
+         july:87,
+         june:20,
+         may:15,
+         april:25,
+         march:33,
+         febuary:36,
+         january:50,
+         december:20,
+         november:21,
+         october:23,
+         september:19,
+         year:5
+     }
+
  };
     window.localStorage.dollaDollaBillsYall = JSON.stringify(dollaDollaBillsYall);
     window.localStorage.commitments = JSON.stringify(commitments);

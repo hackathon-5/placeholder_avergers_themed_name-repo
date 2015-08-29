@@ -313,6 +313,17 @@ ion-view ion-content div.scroll h1 {
     width: 100%;
   }
 
+ .logout-btn {
+  background: #ed1b2f;
+  padding: 10px 12%;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  margin-top: 30px;
+  width: 100%;
+}
+
   .collab-btn {
       background: #33AD33;
     padding: 10px 12%;
