@@ -9,58 +9,266 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
   var adultData = {
-    'test':{
-      'firstName':'Test',
-      'lastName':'McTest',
-      'address':'test st',
-      'email':'test@test.com',
-      'password':'pass4test',
+'rataskoskr':{
+  'firstName':'Ronak',
+  'lastName':'Raithatha',
+  'address':'1400 South St',
+  'email':'ronak@gmail.com',
+  'password':'pass4ron',
+  'img':'../img/default-adult-img.png',
+  'description': 'I love working on cars during the weekend.'
+},
+  'nations':{
+      'firstName':'Brian',
+      'lastName':'Nations',
+      'address':'1698 Summer Sty',
+      'email':'brian.nations@gmail.com',
+      'password':'pass4brian',
       'img':'../img/default-adult-img.png',
-      'description': 'I love working on cars during the weekend.'
-    }
-  };
+      'description': 'I love to teach css'
+  },
+  'barrineau':{
+      'firstName':'Ryan',
+      'lastName':'Barrineau',
+      'address':'1251 Springhill Rd',
+      'email':'ryan.barrineau@gmail.com',
+      'password':'pass4ryan',
+      'img':'../img/default-adult-img.png',
+      'description': 'I try to tackle a home repair job every weekend'
+  },
+  'forest':{
+      'firstName':'Forrest',
+      'lastName':'Short',
+      'address':'920 King Street',
+      'email':'forrest.short@gmail.com',
+      'password':'pass4forrest',
+      'img':'../img/default-adult-img.png',
+      'description': 'I find baking to be both therapeutic and stimulating'
+  },
+  'dexter':{
+      'firstName':'Dexter',
+      'lastName':'Something',
+      'address':'920 King Street',
+      'email':'dexter@gmail.com',
+      'password':'pass4dex',
+      'img':'../img/default-adult-img.png',
+      'description': 'I find baking to be both therapeutic and stimulating'
+  }
+};
   var childData = {
-    'testChild':{
-      'firstName':'Child',
-      'lastName':'McTest',
-      'address':'test st',
-      'email': 'child@test.com',
-      'password': 'pass4child',
+'simon':{
+  'firstName':'Simon',
+  'lastName':'Barrineau',
+  'address':'1251 Springhill Rd',
+  'email': 'simon.barrineau@gmail.com',
+  'password': 'pass4simon',
+  'img': '../img/default-child-img.png',
+  'description': 'I would love to help some w/ their programming side projects.',
+  'balance' : 20.00
+},
+  'liam':{
+      'firstName':'Liam',
+      'lastName':'Battles',
+      'address':'4967 Meadow Ave',
+      'email': 'liam@gmail.com',
+      'password': 'pass4liam',
       'img': '../img/default-child-img.png',
-      'description': 'I would love to help some w/ their programming side projects.',
-      'balance' : 25.00
-    }
-  };
-
- var commitments = {
-        testChild:{
+      'description': 'I am interested in helping with automotive projects',
+      'balance' : 30.00
+  },
+  'erin':{
+      'firstName':'Erin',
+      'lastName':'Barrineau',
+      'address':'1251 Springhill Rd',
+      'email': 'erin@gmail.com',
+      'password': 'pass4erin',
+      'img': '../img/default-child-img.png',
+      'description': 'I want to work to learn something and make money',
+      'balance' : 15.00
+  },
+  'daniel':{
+      'firstName':'Daniel',
+      'lastName':'Tiger',
+      'address':'1313 Trolley Rd',
+      'email': 'daniel.tiger@gmail.com',
+      'password': 'pass4dan',
+      'img': '../img/default-child-img.png',
+      'description': 'Please just Let me walk your dog',
+      'balance' : 42.00
+  },
+  'sarah':{
+      'firstName':'Sarah',
+      'lastName':'Willson',
+      'address':'3243 Redeemer Rd',
+      'email': 'simon.wilson@gmail.com',
+      'password': 'pass4sarah',
+      'img': '../img/default-child-img.png',
+      'description': 'I like to program',
+      'balance' : 60.00
+  }
+};
+  var commitments = {
+        liam:{
           1:{
             'id'              : 2,
-            'user'            : 'test',
+            'user'            : 'barrineau',
             'img'             :'../img/ionic.png',
-            'jobname'         : 'Replace Shingle',
-            'pay'             : 15.00,
-            'category'        : 'home repair',
+            'jobname'         : 'Change burnt out car light bulbs',
+            'pay'             : 10.00,
+            'category'        : 'automotive',
             'address'         : '1251 Springhill Rd',
             'hours'           : 3,
-            'extraInfo'      : 'Wear clothes that can get dirty',
-            'ageRestriction' : 16,
-            'startTime':'2pm',
-            'startDate':'09/30'
+            'extraInfo'      : 'My headlights are out',
+            'ageRestriction' : 13,
+            'startTime':'2:30pm',
+            'startDate':'09/03'
+          },
+        2:{
+            'id'              : 3,
+            'user'            : 'nations',
+            'img'             :'../img/ionic.png',
+            'jobname'         : 'Change layout of webpage',
+            'pay'             : 15.00,
+            'category'        : 'web development',
+            'address'         : '2233 Rutledge Ave',
+            'hours'           : 5,
+            'extraInfo'      : 'I will provide snacks',
+            'ageRestriction' : '13',
+            'startTime':'10:30am',
+            'startDate':'09/13'
+        },
+          currentCount:2
+        },
+      simon: {
+          1: {
+              'id': 1,
+              'user': 'forrest',
+              'img': '../img/ionic.png',
+              'jobname': 'Replace Shingle',
+              'pay': 10.00,
+              'category': 'rake leaves',
+              'address': '1300 Atlantic Ave',
+              'hours': 2.5,
+              'extraInfo': 'My yard is full of leaves',
+              'ageRestriction': 13,
+              'startTime': '8:30am',
+              'startDate': '10/01'
+          },
+          2: {
+              'id': 4,
+              'user': 'ratastkoskr',
+              'img': '../img/ionic.png',
+              'jobname': 'Build bookcases',
+              'pay': 5.00,
+              'category': 'home improvement',
+              'address': '1300 Redeemer Rd',
+              'hours': 1,
+              'extraInfo': 'Ikea bookcases need putting together',
+              'ageRestriction': '11',
+              'startTime': '11:00am',
+              'startDate': '09/09'
+          },
+          3: {
+              'id': 5,
+              'user': 'dexter',
+              'img': '../img/ionic.png',
+              'jobname': 'Write Magento code for me',
+              'pay': 10.00,
+              'category': 'web development',
+              'address': '145 Williman St',
+              'hours': 15,
+              'extraInfo': 'I will provide snacks',
+              'ageRestriction': 'none',
+              'startTime': '7:00am',
+              'startDate': '09/01'
+          },
+          currentCount: 3,
+      },
+      erin:{
+          1:{
+              'id'              : 6,
+              'user'            : 'forrest',
+              'img'             :'../img/ionic.png',
+              'jobname'         : 'Nail together planting boxes',
+              'pay'             : 5.00,
+              'category'        : 'gardening',
+              'address'         : '4807 Boulevard Lane',
+              'hours'           : 1,
+              'extraInfo'      : 'Have three planters that need planting',
+              'ageRestriction' : 'none',
+              'startTime':'11:00am',
+              'startDate':'09/18'
+          },
+          2:{
+              'id'              : 10,
+              'user'            : 'nations',
+              'img'             :'../img/ionic.png',
+              'jobname'         : 'Set time on VCR',
+              'pay'             : 2.50,
+              'category'        : 'fix/repair',
+              'address'         : '1254 Durant Cir',
+              'hours'           :.25,
+              'extraInfo'      : 'My VCR time will not stop blinking',
+              'ageRestriction' : 'none',
+              'startTime':'7:30am',
+              'startDate':'09/07'
+          },
+          currentCount:2
+      },
+      dan:{
+          1:{
+              'id'              : 8,
+              'user'            : 'dexter',
+              'img'             :'../img/ionic.png',
+              'jobname'         : 'Beat Super Mario Bros',
+              'pay'             : 5.00,
+              'category'        : 'gaming',
+              'address'         : '920 King Street',
+              'hours'           : 2,
+              'extraInfo'      : 'I am looking for someone to show me how to be Super Mario Bros',
+              'ageRestriction' : 'none',
+              'startTime':'3:00pm',
+              'startDate':'08/31'
+          },
+          2:{
+              'id'              : 7,
+              'user'            : 'rataskoskr',
+              'img'             :'../img/ionic.png',
+              'jobname'         : 'change sparkplugs',
+              'pay'             : 8.75,
+              'category'        : 'automotive',
+              'address'         : '1248 Springhill Rd',
+              'hours'           : 1,
+              'extraInfo'      : 'I need help changing sparkplugs',
+              'ageRestriction' : '12',
+              'startTime':'10:00am',
+              'startDate':'09/15'
+          },
+          currentCount:2
+      },
+      sarah:{
+          1:{
+              'id'              : 9,
+              'user'            : 'barrineau',
+              'img'             :'../img/ionic.png',
+              'jobname'         : 'Paint fence',
+              'pay'             : 35.00,
+              'category'        : 'home repair',
+              'address'         : '1457 Cherry St',
+              'hours'           : 5,
+              'extraInfo'      : 'Wear clothes that can get dirty',
+              'ageRestriction' : 16,
+              'startTime':'08:00am',
+              'startDate':'09/17'
           },
           currentCount:1
-        }
+      }
  };
-
-window.localStorage.commitments = JSON.stringify(commitments);
-window.localStorage.adultAccountInfo = JSON.stringify(adultData);
-window.localStorage.childAccountInfo = JSON.stringify(childData);
-
   var jobs = {
       1 : {
-          'id': 1,
-          'user': 'test',
-          'img':'../img/person_1.png',
+          'id': 11,
+          'user': 'dexter',
+          'img':'../img/person_4.png',
           'jobname': 'Change oil in 1998 VW Golf',
           'pay': 10.00,
           'category': 'automotive',
@@ -68,29 +276,29 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
           'hours': 2,
           'extraInfo': 'Wear clothes that can get dirty',
           'ageRestriction': 'none',
-          'startTime':'6pm',
+          'startTime':'2pm',
           'startDate':'08/30'
       },
       2:{
-          'id'              : 2,
-          'user'            : 'test',
+          'id'              : 12,
+          'user'            : 'ratastkoskr',
           'img'             :'../img/person_2.png',
           'jobname'         : 'Replace Shingle',
           'pay'             : 15.00,
           'category'        : 'home repair',
-          'address'         : '1251 Springhill Rd',
+          'address'         : '3922 Fort Drive',
           'hours'           : 3,
-          'extraInfo'      : 'Wear clothes that can get dirty',
+          'extraInfo'      : 'We will not be working high on a roof this.',
           'ageRestriction' : 16,
           'startTime':'2pm',
           'startDate':'09/30'
       },
       3:{
-          'id'              : 3,
-          'user'            : 'test',
+          'id'              : 13,
+          'user'            : 'barrineau',
           'img'             :'../img/person_3.png',
           'jobname'         : 'Make webpage',
-          'pay'             : 20.00,
+          'pay'             : 10.00,
           'category'        : 'computers',
           'address'         : '145 Williman St',
           'hours'           : 3,
@@ -100,22 +308,111 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
           'startDate':'09/30'
       },
       4: {
-          'id'              : 4,
-          'user'            : 'test',
+          'id'              : 14,
+          'user'            : 'forrest',
           'img'             :'../img/person_4.png',
-          'jobname': 'as',
-          'pay': 20.00,
-          'category': 'computers',
+          'jobname': 'Mow lawn',
+          'pay': 10.00,
+          'category': 'yard work',
           'address': '145 Williman St',
-          'hours': 3,
+          'hours': 1,
           'extraInfo': 'I need a webpage to show off my cats',
           'ageRestriction': 'none',
+          'startTime':'10:00am',
+          'startDate':'09/02'
+      },
+      5: {
+          'id'              : 15,
+          'user'            : 'ratastkoskr',
+          'img'             :'../img/person_2.png',
+          'jobname': 'Change Lightswitch',
+          'pay': 8.00,
+          'category': 'electrical',
+          'address': '1251 Springhill rd',
+          'hours':.5,
+          'extraInfo': 'I will turn all power off and before we take the switch apart',
+          'ageRestriction': '16',
           'startTime':'8am',
           'startDate':'09/30'
-          }
+      },
+      6: {
+          'id'              : 16,
+          'user'            : 'ratastkoskr',
+          'img'             :'../img/person_2.png',
+          'jobname': 'change lighbulb',
+          'pay': 5.00,
+          'category': 'electrical',
+          'address': '1251 Springhill rd',
+          'hours':.5,
+          'extraInfo': 'I have a lightbulb that I cannot seam to reach',
+          'ageRestriction': 'none',
+          'startTime':'9am',
+          'startDate':'09/30'
+      },
+      7: {
+          'id'              : 17,
+          'user'            : 'nations',
+          'img'             :'../img/person_1.png',
+          'jobname': 'clean kitchen',
+          'pay': 10.00,
+          'category': 'cleaning',
+          'address': '4455 San Socci',
+          'hours': 1,
+          'extraInfo': 'I just need someone to mop my floor',
+          'ageRestriction': 'none',
+          'startTime':'9:30',
+          'startDate':'11/22'
+      },
+      8: {
+          'id'              : 18,
+          'user'            : 'barrineau',
+          'img'             :'../img/person_3.png',
+          'jobname': 'clean kitchen',
+          'pay': 10.00,
+          'category': 'cleaning',
+          'address': '4455 San Socci',
+          'hours': 1,
+          'extraInfo': 'I just need someone to mop my floor',
+          'ageRestriction': 'none',
+          'startTime':'9:30',
+          'startDate':'11/22'
+      },
+      9: {
+          'id'              : 19,
+          'user'            : 'forrest',
+          'img'             :'../img/person_4.png',
+          'jobname': 'clean garage out',
+          'pay': 35.00,
+          'category': 'cleaning',
+          'address': '2568 Saint street',
+          'hours': 5,
+          'extraInfo': 'My garage is full and needs to be cleaned out',
+          'ageRestriction': 'none',
+          'startTime':'10:00am',
+          'startDate':'09/11'
+      },
+      10: {
+          'id'              : 20,
+          'user'            : 'dexter',
+          'img'             :'../img/person_4.png',
+          'jobname': 'wash boat',
+          'pay': 10.00,
+          'category': 'cleaning',
+          'address': '2568 Huger st',
+          'hours': 1,
+          'extraInfo': 'I would like for someone to wash my boat',
+          'ageRestriction': 'none',
+          'startTime':'3:00pm',
+          'startDate':'09/05'
+      }
     };
-    window.localStorage.jobsCount = 4;
+
+    window.localStorage.commitments = JSON.stringify(commitments);
+    window.localStorage.adultAccountInfo = JSON.stringify(adultData);
+    window.localStorage.childAccountInfo = JSON.stringify(childData);
     window.localStorage.jobs = JSON.stringify(jobs);
+    window.localStorage.jobsCount = 4;
+
 
     //Checking if user is logged in
     //So as to display the correct side menu options
