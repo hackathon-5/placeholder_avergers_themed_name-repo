@@ -15,7 +15,7 @@ angular.module('starter.controllers', [])
       'address':'test st',
       'email':'test@test.com',
       'password':'pass4test',
-      'img':'../img/ionic.png',
+      'img':'../img/default-adult-img.png',
       'description': 'I love working on cars during the weekend.'
     }
   };
@@ -26,6 +26,7 @@ angular.module('starter.controllers', [])
       'address':'test st',
       'email': 'child@test.com',
       'password': 'pass4child',
+      'img': '../img/default-child-img.png',
       'description': 'I would love to help some w/ their programming side projects.'
     }
   };
@@ -57,8 +58,8 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
   var jobs = {
       1 : {
           'id': 1,
-          'user': 'test',      
-          'img':'../img/ionic.png',
+          'user': 'test',
+          'img':'../img/person_1.png',
           'jobname': 'Change oil in 1998 VW Golf',
           'pay': 10.00,
           'category': 'automotive',
@@ -72,7 +73,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
       3:{
           'id'              : 3,
           'user'            : 'test',
-          'img'             :'../img/ionic.png',
+          'img'             :'../img/person_3.png',
           'jobname'         : 'Make webpage',
           'pay'             : 20.00,
           'category'        : 'computers',
@@ -86,7 +87,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
       4: {
           'id'              : 4,
           'user'            : 'test',
-          'img'             :'../img/ionic.png',
+          'img'             :'../img/person_4.png',
           'jobname': 'as',
           'pay': 20.00,
           'category': 'computers',
@@ -133,7 +134,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
     } else {
       if(loginInfo[username].password === password){
         window.localStorage.userType = $scope.data.userType;
-        window.localStorage.userName = username; 
+        window.localStorage.userName = username;
         if($scope.data.userType === "child"){
           $rootScope.isChild = true;
         }

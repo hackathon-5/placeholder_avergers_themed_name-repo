@@ -3,13 +3,22 @@
     <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
     </button>
   </ion-nav-buttons>
-  <ion-content>
-    <ion-list>
+  <ion-content class="opp-content">
+  <div class="home_banner">
+    <img class="main_banner" src="../img/mowing.jpg" />
+    <span>Child Labor</span>
+    <p class="direction">Person</p>
+    <p class="direction second">Job</p>
+    <p class="direction third">Pay</p>
+    <img class="arrow" src="../img/arrow.png" />
+    <img class="arrow second" src="../img/arrow.png" />
+    <img class="arrow third" src="../img/arrow.png" />
+  </div>
+    <ion-list class="job-listing">
       <ion-item ng-repeat="job in jobs" href="#/jobdescription/{{job.id}}">
-        <img ng-src="{{job.img}}" />
-        {{job.jobname}}
-        {{job.hours}}
-        {{job.pay}}
+        <img class="job-img" ng-src="{{job.img}}" />
+        <p class="job-name">{{job.jobname}}</p>
+        <p class="job-pay">{{job.hours}}/{{job.pay}}</p>
       </ion-item>
     </ion-list>
   </ion-content>
