@@ -47,3 +47,70 @@ ion-header-bar.bar.bar-stable.bar-header h1 {
 .menu-open .bar-stable .button.button-icon {
   color: #33AD33;
 }
+
+ion-list .list {
+  margin-top: 10px;
+}
+
+ion-list .list .item a.item-content {
+    border: none;
+    background: #555;
+    color: #fff;
+}
+
+ion-view ion-content {
+  padding-top: 50px !important;
+}
+
+ion-view ion-content div.scroll {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+ion-view ion-content div.scroll h1 {
+    background: #428eb3;
+    padding: 15px;
+    color: white;
+    border-radius: 100px 10px;
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+
+  ion-view ion-content div.scroll label {
+    font-size: 22px;
+    display: block;
+    margin-bottom: -5px;
+    font-style: italic;
+  }
+
+  ion-view ion-content div.scroll input {
+    padding: 20px;
+    height: auto;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+
+  .login-btn {
+    background: #33AD33;
+    padding: 10px 50px;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    float: left;
+    margin-top: 20px;
+  }
+
+  .register-btn {
+    background: #555;
+    padding: 10px 50px;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    float: right;
+    margin-top: 20px;
+  }
