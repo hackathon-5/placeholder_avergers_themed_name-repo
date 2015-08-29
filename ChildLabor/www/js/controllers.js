@@ -175,7 +175,8 @@ angular.module('starter.controllers', [])
         console.log($stateParams.jobId);
         var allinfo = window.localStorage['jobs'];
         if(allinfo) {
-            $scope.jobs = angular.fromJson(allinfo);
+            $scope.info = angular.fromJson(allinfo)[$stateParams.jobId];
+            console.log($scope.info);
         }
         return [];
     })
