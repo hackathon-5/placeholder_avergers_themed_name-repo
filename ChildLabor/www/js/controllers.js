@@ -8,12 +8,44 @@
   // listen for the $ionicView.enter event:
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-  window.localStorage.loginInformation = JSON.stringify("{'test':{'email':'test@test.com','password':'pass4test'}}");
+  var testData = {
+    'test':{
+      'address':'test st',
+      'email':'test@test.com',
+      'password':'pass4test'
+    }
+  };
+  window.localStorage.loginInformation = JSON.stringify(testData);
 })
-.controller('LoginCtrl', function($scope) {
-  $scope.login = function(email, password){
+.controller('LoginCtrl', function($scope, $state) {
+  $scope.login = function(username, password){
     var testInfo = JSON.parse(window.localStorage.loginInformation);
-    alert(testInfo.test);
+    if(testInfo[username] === ""){
+      alert("no such user");
+    } else {
+      if(testInfo[username].password === password){
+        alert("loggedIn");
+      } else {
+        alert("Wrong password");
+      }
+    }
+  };
+
+  $scope.toRegisterPage = function(){
+    $state.go("register");
+  };
+
+})
+.controller('RegisterCtrl', function($scope) {
+  $scope.register = function(username, email, password, address){
+    var loginInfo = JSON.parse(window.localStorage.loginInformation);
+    loginInfo[username] = {
+      'email': email,
+      'password': password,
+      'address': address,
+    };
+    window.localStorage.loginInformation = JSON.stringify(loginInfo);
+    console.log(JSON.parse(window.localStorage.loginInformation));
   };
 })
 

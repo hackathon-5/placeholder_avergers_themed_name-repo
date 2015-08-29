@@ -37,9 +37,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       templateUrl: 'templates/search.html'
   })
   .state('login', {
-      url: '/login',
-      templateUrl: 'templates/login.html',
-      controller: 'LoginCtrl'
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'LoginCtrl'
+  })
+  .state('register', {
+    url: '/register',
+    templateUrl: 'templates/register.html',
+    controller: 'RegisterCtrl'
   })
 
   .state('browse', {
