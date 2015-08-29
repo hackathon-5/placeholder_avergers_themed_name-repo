@@ -33,25 +33,47 @@ angular.module('starter.controllers', [])
   };
 
  var commitments = {
-        testChild:{
-          1:{
-            'id'              : 2,
-            'user'            : 'test',
-            'img'             :'./img/ionic.png',
-            'jobname'         : 'Replace Shingle',
-            'pay'             : 15.00,
-            'category'        : 'home repair',
-            'address'         : '1251 Springhill Rd',
-            'hours'           : 3,
-            'extraInfo'      : 'Wear clothes that can get dirty',
-            'ageRestriction' : 16,
-            'startTime':'2pm',
-            'startDate':'09/30'
-          },
-          currentCount:1
-        }
+    testChild:{
+      1:{
+        'id'              : 2,
+        'user'            : 'test',
+        'img'             :'./img/ionic.png',
+        'jobname'         : 'Replace Shingle',
+        'pay'             : 15.00,
+        'category'        : 'home repair',
+        'address'         : '1251 Springhill Rd',
+        'hours'           : 3,
+        'extraInfo'       : 'Wear clothes that can get dirty',
+        'ageRestriction'  : 16,
+        'startTime'       :'2pm',
+        'startDate'       :'09/30'
+      },
+      currentCount:1
+    }
  };
 
+ var dollaDollaBillsYall = {
+    testChild:{
+      week1:12,
+      week2:13,
+      week3:2,
+      week4:14,
+      august:41,
+      july:56,
+      june:68,
+      may:45,
+      april:40,
+      march:38,
+      febuary:39,
+      january:43,
+      december:58,
+      november:29,
+      october:47,
+      september:32,
+      year:536
+    }
+ };
+window.localStorage.dollaDollaBillsYall = JSON.stringify(dollaDollaBillsYall);
 window.localStorage.commitments = JSON.stringify(commitments);
 window.localStorage.adultAccountInfo = JSON.stringify(adultData);
 window.localStorage.childAccountInfo = JSON.stringify(childData);
@@ -70,20 +92,6 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
           'ageRestriction': 'none',
           'startTime':'6pm',
           'startDate':'08/30'
-      },
-      2:{
-          'id'              : 2,
-          'user'            : 'test',
-          'img'             :'../img/ionic.png',
-          'jobname'         : 'Replace Shingle',
-          'pay'             : 15.00,
-          'category'        : 'home repair',
-          'address'         : '1251 Springhill Rd',
-          'hours'           : 3,
-          'extraInfo'      : 'Wear clothes that can get dirty',
-          'ageRestriction' : 16,
-          'startTime':'2pm',
-          'startDate':'09/30'
       },
       3:{
           'id'              : 3,
@@ -293,7 +301,8 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
 })
 
 .controller('KidsBalanceCtrl', function($scope, $state) {
-
+  $scope.dollaDollaBillsYall = JSON.parse(window.localStorage.dollaDollaBillsYall);
+  $scope.currentBillsYall = $scope.dollaDollaBillsYall[window.localStorage.userName];
 })
 
 
