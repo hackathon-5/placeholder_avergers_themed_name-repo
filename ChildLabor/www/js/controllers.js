@@ -190,7 +190,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
     window.localStorage.userType = "";
     window.localStorage.userName = "";
     $rootScope.isNotLoggedIn = true;
-    $state.go("login");
+    $state.go("opportunities");
     };
 })
 

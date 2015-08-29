@@ -5,9 +5,16 @@
     </ion-nav-buttons>
     <ion-content>
         <ion-list>
-            <ion-item ng-repeat="(infKey, infValue) in info">
-                <div>{{infKey}}-{{infValue}}</div>
-            </ion-item>
+            <img ng-src="{{info.img}}">
+            <label>{{info.user}}</label>
+            <label>{{info.jobname}}</label>
+            <label>${{info.pay}}/{{info.hours}}</label>
+            <label>{{info.category}}</label>
+            <label>{{info.address}}</label>
+            <label>{{info.extraInfo}}</label>
+            <label>{{info.ageRestriction}}</label>
+            <label>{{info.startDate}}-{{info.startTime}}</label>
+
             <button ng-click="collaborate()" ng-show="isChild" >Collaborate</button>
         </ion-list>
     </ion-content>
