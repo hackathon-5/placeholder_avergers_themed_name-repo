@@ -6,14 +6,20 @@
   <ion-content>
   	<h1>New Opportunity</h1>
     <div>
-      <input ng-model="jobname" type="text" placeholder="Job Name" />
-      <input ng-model="pay" type="number" placeholder="Pay per hour" />
-      <input ng-model="hours" type="number" placeholder="Hours" />
-      <input ng-model="ageRestriction" type="number" placeholder="Age restriction" />
-      <input ng-model="extraInfo" type="textarea" placeholder="Additional Infomation" />
+      <input ng-model="data.jobname" type="text" placeholder="Job Name" />
+      <input ng-model="data.startDate" type="text" placeholder="Start Date" />
+      <input ng-model="data.startTime" type="text" placeholder="Start Time" />
+      <input ng-model="data.hours" type="number" placeholder="Hours" />
+      <input ng-model="data.pay" type="number" placeholder="Pay per hour" />
+      <input ng-model="data.ageRestriction" type="number" placeholder="Age restriction" />
+      <label>Select Category</label>
+      <select name="categorySelect" ng-model="data.category">
+        <option ng-repeat="option in categories" value="{{option.id}}">{{option.id}}</option>
+      </select>
+      <input ng-model="data.extraInfo" type="textarea" placeholder="Additional Infomation" />
     </div>
     <div>
-      <button class="register-page-btn" ng-click="register(username, email, password, address)">Register</button>
+      <button class="register-page-btn" ng-click="addNewOpportunity()">Add New Opportunity</button>
     </div>
   </ion-content>
 </ion-view>

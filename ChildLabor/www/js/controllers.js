@@ -43,59 +43,63 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
 
   var jobs = {
       1 : {
-          'id': 1,        
+          'id': 1,
+          'user': 'test',      
+          'img':'../img/ionic.png',
           'jobname': 'Change oil in 1998 VW Golf',
           'pay': 10.00,
           'category': 'automotive',
           'address': '4807 Boulevard Lane',
           'hours': 2,
-          'prereq': 'none',
-          'tools_needed': 'none',
-          'tools_wanted': 'none',
-          'extra_info': 'Wear clothes that can get dirty',
-          'age_restriction': 'none'
+          'extraInfo': 'Wear clothes that can get dirty',
+          'ageRestriction': 'none',
+          'startTime':'6pm',
+          'startDate':'08/30'
       },
       2:{
           'id'              : 2,
+          'user'            : 'test',
+          'img'             :'../img/ionic.png',
           'jobname'         : 'Replace Shingle',
           'pay'             : 15.00,
           'category'        : 'home repair',
           'address'         : '1251 Springhill Rd',
           'hours'           : 3,
-          'prereq'          : 'none',
-          'tools_needed'    : 'none',
-          'tools_wanted'    : 'none',
-          'extra_info'      : 'Wear clothes that can get dirty',
-          'age_restriction' : 16
+          'extraInfo'      : 'Wear clothes that can get dirty',
+          'ageRestriction' : 16,
+          'startTime':'2pm',
+          'startDate':'09/30'
       },
       3:{
           'id'              : 3,
+          'user'            : 'test',
+          'img'             :'../img/ionic.png',
           'jobname'         : 'Make webpage',
           'pay'             : 20.00,
           'category'        : 'computers',
           'address'         : '145 Williman St',
           'hours'           : 3,
-          'prereq'          : 'Web development',
-          'tools_needed'    : 'none',
-          'tools_wanted'    : 'none',
-          'extra_info'      : 'I need a webpage to show off my cats',
-          'age_restriction' : 'none'
+          'extraInfo'      : 'I need a webpage to show off my cats',
+          'ageRestriction' : 'none',
+          'startTime':'4pm',
+          'startDate':'09/30'
       },
       4: {
           'id'              : 4,
+          'user'            : 'test',
+          'img'             :'../img/ionic.png',
           'jobname': 'as',
           'pay': 20.00,
           'category': 'computers',
           'address': '145 Williman St',
           'hours': 3,
-          'prereq': 'Web development',
-          'tools_needed': 'none',
-          'tools_wanted': 'none',
-          'extra_info': 'I need a webpage to show off my cats',
-          'age_restriction': 'none'
+          'extraInfo': 'I need a webpage to show off my cats',
+          'ageRestriction': 'none',
+          'startTime':'8am',
+          'startDate':'09/30'
           }
     };
-
+    window.localStorage.jobsCount = 4;
     window.localStorage.jobs = JSON.stringify(jobs);
 
     //Checking if user is logged in
@@ -198,11 +202,51 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
     type = "childAccountInfo";
   }
   $scope.user = JSON.parse(window.localStorage[type])[window.localStorage.userName];
-  console.log($scope.user);
 })
 
 .controller('AddOpportunityCtrl', function($scope, $state) {
+  //Get info from html to add to Jobs √
+  //Get Address from userAccountInfo. √
+  //User jobCount to create global id
+  //Increment global id
+  //Cooking, Baking, Automotive, Computer, Programming, Home √
+  $scope.categories = [
+    {id: 'Automotive'},
+    {id: 'Baking'},
+    {id: 'Computer'},
+    {id: 'Cooking'},
+    {id: 'Home'},
+    {id: 'Programming'}
+  ];
+  var userType = window.localStorage.userType;
+  var type = "";
+  if(userType==="adult"){
+    type = "adultAccountInfo";
+  } else {
+    type = "childAccountInfo";
+  }
+  $scope.user = JSON.parse(window.localStorage[type])[window.localStorage.userName];
+  $scope.data = {};
+  $scope.data.category = "Automotive";
+  $scope.addNewOpportunity = function(){
+    console.log($scope.data);
+    $scope.data.address = $scope.user.address;
+    $scope.data.user = window.localStorage.userName;
+    $scope.data.img = $scope.user.img;
+    $scope.jobs = JSON.parse(window.localStorage.jobs);
+    $scope.jobCount = +window.localStorage.jobsCount;
+    $scope.jobCount = $scope.jobCount + 1;
+    console.log($scope.jobCount);
+    $scope.data.id = $scope.jobCount;
+    $scope.jobs[$scope.jobCount] = $scope.data;
+    console.log($scope.jobs);
+    window.localStorage.jobsCount = $scope.jobCount;
+    window.localStorage.jobs = JSON.stringify($scope.jobs);
 
+    $scope.data = {};
+    $scope.data.category = "Automotive";
+    $state.go('opportunities');
+  };
 })
 
 .controller('CurrentCollaborationsCtrl', function($scope) {
