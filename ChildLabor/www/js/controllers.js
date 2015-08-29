@@ -15,7 +15,7 @@ angular.module('starter.controllers', [])
   'address':'1400 South St',
   'email':'ronak@gmail.com',
   'password':'pass4ron',
-  'img':'../img/person_2.png',
+  'img':'./img/person_2.png',
   'description': 'I love working on cars during the weekend.'
 },
   'nations':{
@@ -24,7 +24,7 @@ angular.module('starter.controllers', [])
       'address':'1698 Summer Sty',
       'email':'brian.nations@gmail.com',
       'password':'pass4brian',
-      'img':'../img/person_1.png',
+      'img':'./img/person_1.png',
       'description': 'I love to teach css'
   },
   'barrineau':{
@@ -33,7 +33,7 @@ angular.module('starter.controllers', [])
       'address':'1251 Springhill Rd',
       'email':'ryan.barrineau@gmail.com',
       'password':'pass4ryan',
-      'img':'../img/person_3.png',
+      'img':'./img/person_3.png',
       'description': 'I try to tackle a home repair job every weekend'
   },
   'forest':{
@@ -42,7 +42,7 @@ angular.module('starter.controllers', [])
       'address':'920 King Street',
       'email':'forrest.short@gmail.com',
       'password':'pass4forrest',
-      'img':'../img/person_4.png',
+      'img':'./img/person_4.png',
       'description': 'I find baking to be both therapeutic and stimulating'
   },
   'dexter':{
@@ -51,7 +51,7 @@ angular.module('starter.controllers', [])
       'address':'920 King Street',
       'email':'dexter@gmail.com',
       'password':'pass4dex',
-      'img':'../img/person_4.png',
+      'img':'./img/person_4.png',
       'description': 'I find baking to be both therapeutic and stimulating'
   }
 };
@@ -62,7 +62,7 @@ angular.module('starter.controllers', [])
   'address':'1251 Springhill Rd',
   'email': 'simon.barrineau@gmail.com',
   'password': 'pass4simon',
-  'img': '../img/default-child-img.png',
+  'img': './img/default-child-img.png',
   'description': 'I would love to help some w/ their programming side projects.',
   'balance' : 20.00
 },
@@ -72,7 +72,7 @@ angular.module('starter.controllers', [])
       'address':'4967 Meadow Ave',
       'email': 'liam@gmail.com',
       'password': 'pass4liam',
-      'img': '../img/default-child-img.png',
+      'img': './img/default-child-img.png',
       'description': 'I am interested in helping with automotive projects',
       'balance' : 30.00
   },
@@ -82,7 +82,7 @@ angular.module('starter.controllers', [])
       'address':'1251 Springhill Rd',
       'email': 'erin@gmail.com',
       'password': 'pass4erin',
-      'img': '../img/default-child-img.png',
+      'img': './img/default-child-img.png',
       'description': 'I want to work to learn something and make money',
       'balance' : 15.00
   },
@@ -92,7 +92,7 @@ angular.module('starter.controllers', [])
       'address':'1313 Trolley Rd',
       'email': 'daniel.tiger@gmail.com',
       'password': 'pass4dan',
-      'img': '../img/default-child-img.png',
+      'img': './img/default-child-img.png',
       'description': 'Please just Let me walk your dog',
       'balance' : 42.00
   },
@@ -102,7 +102,7 @@ angular.module('starter.controllers', [])
       'address':'3243 Redeemer Rd',
       'email': 'simon.wilson@gmail.com',
       'password': 'pass4sarah',
-      'img': '../img/default-child-img.png',
+      'img': './img/default-child-img.png',
       'description': 'I like to program',
       'balance' : 60.00
   }
@@ -112,7 +112,7 @@ angular.module('starter.controllers', [])
           1:{
             'id'              : 2,
             'user'            : 'barrineau',
-            'img'             :'../img/ionic.png',
+            'img'             :'./img/person_3.png',
             'jobname'         : 'Change burnt out car light bulbs',
             'pay'             : 10.00,
             'category'        : 'automotive',
@@ -126,7 +126,7 @@ angular.module('starter.controllers', [])
         2:{
             'id'              : 3,
             'user'            : 'nations',
-            'img'             :'../img/ionic.png',
+            'img'             :'./img/person_1.png',
             'jobname'         : 'Change layout of webpage',
             'pay'             : 15.00,
             'category'        : 'web development',
@@ -143,7 +143,7 @@ angular.module('starter.controllers', [])
           1: {
               'id': 1,
               'user': 'forrest',
-              'img': '../img/ionic.png',
+              'img': './img/person_4.png',
               'jobname': 'Replace Shingle',
               'pay': 10.00,
               'category': 'rake leaves',
@@ -157,7 +157,7 @@ angular.module('starter.controllers', [])
           2: {
               'id': 4,
               'user': 'ratastkoskr',
-              'img': '../img/ionic.png',
+              'img': './img/person_2.png',
               'jobname': 'Build bookcases',
               'pay': 5.00,
               'category': 'home improvement',
@@ -171,7 +171,7 @@ angular.module('starter.controllers', [])
           3: {
               'id': 5,
               'user': 'dexter',
-              'img': '../img/ionic.png',
+              'img': './img/person_4.png',
               'jobname': 'Write Magento code for me',
               'pay': 10.00,
               'category': 'web development',
@@ -188,7 +188,7 @@ angular.module('starter.controllers', [])
           1:{
               'id'              : 6,
               'user'            : 'forrest',
-              'img'             :'../img/ionic.png',
+              'img'             :'./img/person_4.png',
               'jobname'         : 'Nail together planting boxes',
               'pay'             : 5.00,
               'category'        : 'gardening',
@@ -202,12 +202,12 @@ angular.module('starter.controllers', [])
           2:{
               'id'              : 10,
               'user'            : 'nations',
-              'img'             :'../img/ionic.png',
+              'img'             :'./img/person_1.png',
               'jobname'         : 'Set time on VCR',
               'pay'             : 2.50,
               'category'        : 'fix/repair',
               'address'         : '1254 Durant Cir',
-              'hours'           :.25,
+              'hours'           : 0.25,
               'extraInfo'      : 'My VCR time will not stop blinking',
               'ageRestriction' : 'none',
               'startTime':'7:30am',
@@ -219,7 +219,7 @@ angular.module('starter.controllers', [])
           1:{
               'id'              : 8,
               'user'            : 'dexter',
-              'img'             :'../img/ionic.png',
+              'img'             :'./img/person_4.png',
               'jobname'         : 'Beat Super Mario Bros',
               'pay'             : 5.00,
               'category'        : 'gaming',
@@ -233,7 +233,7 @@ angular.module('starter.controllers', [])
           2:{
               'id'              : 7,
               'user'            : 'rataskoskr',
-              'img'             :'../img/ionic.png',
+              'img'             :'./img/person_2.png',
               'jobname'         : 'change sparkplugs',
               'pay'             : 8.75,
               'category'        : 'automotive',
@@ -250,7 +250,7 @@ angular.module('starter.controllers', [])
           1:{
               'id'              : 9,
               'user'            : 'barrineau',
-              'img'             :'../img/ionic.png',
+              'img'             :'./img/person_3.png',
               'jobname'         : 'Paint fence',
               'pay'             : 35.00,
               'category'        : 'home repair',
@@ -279,10 +279,10 @@ angular.module('starter.controllers', [])
                 'startTime':'2pm',
                 'startDate':'08/30'
             },
-            2:{
+            12:{
                 'id'              : 12,
                 'user'            : 'ratastkoskr',
-                'img'             :'../img/person_2.png',
+                'img'             :'./img/person_2.png',
                 'jobname'         : 'Replace Shingle',
                 'pay'             : 15.00,
                 'category'        : 'home repair',
@@ -293,10 +293,10 @@ angular.module('starter.controllers', [])
                 'startTime':'2pm',
                 'startDate':'09/30'
             },
-            3:{
+            13:{
                 'id'              : 13,
                 'user'            : 'barrineau',
-                'img'             :'../img/person_3.png',
+                'img'             :'./img/person_3.png',
                 'jobname'         : 'Make webpage',
                 'pay'             : 10.00,
                 'category'        : 'computers',
@@ -307,10 +307,10 @@ angular.module('starter.controllers', [])
                 'startTime':'4pm',
                 'startDate':'09/30'
             },
-            4: {
+            14: {
                 'id'              : 14,
                 'user'            : 'forrest',
-                'img'             :'../img/person_4.png',
+                'img'             :'./img/person_4.png',
                 'jobname': 'Mow lawn',
                 'pay': 10.00,
                 'category': 'yard work',
@@ -321,38 +321,38 @@ angular.module('starter.controllers', [])
                 'startTime':'10:00am',
                 'startDate':'09/02'
             },
-            5: {
+            15: {
                 'id'              : 15,
                 'user'            : 'ratastkoskr',
-                'img'             :'../img/person_2.png',
+                'img'             :'./img/person_2.png',
                 'jobname': 'Change Lightswitch',
                 'pay': 8.00,
                 'category': 'electrical',
                 'address': '1251 Springhill rd',
-                'hours':.5,
+                'hours':0.5,
                 'extraInfo': 'I will turn all power off and before we take the switch apart',
                 'ageRestriction': '16',
                 'startTime':'8am',
                 'startDate':'09/30'
             },
-            6: {
+            16: {
                 'id'              : 16,
                 'user'            : 'ratastkoskr',
-                'img'             :'../img/person_2.png',
+                'img'             :'./img/person_2.png',
                 'jobname': 'change lighbulb',
                 'pay': 5.00,
                 'category': 'electrical',
                 'address': '1251 Springhill rd',
-                'hours':.5,
+                'hours':0.5,
                 'extraInfo': 'I have a lightbulb that I cannot seam to reach',
                 'ageRestriction': 'none',
                 'startTime':'9am',
                 'startDate':'09/30'
             },
-            7: {
+            17: {
                 'id'              : 17,
                 'user'            : 'nations',
-                'img'             :'../img/person_1.png',
+                'img'             :'./img/person_1.png',
                 'jobname': 'clean kitchen',
                 'pay': 10.00,
                 'category': 'cleaning',
@@ -363,10 +363,10 @@ angular.module('starter.controllers', [])
                 'startTime':'9:30',
                 'startDate':'11/22'
             },
-            8: {
+            18: {
                 'id'              : 18,
                 'user'            : 'barrineau',
-                'img'             :'../img/person_3.png',
+                'img'             :'./img/person_3.png',
                 'jobname': 'clean kitchen',
                 'pay': 10.00,
                 'category': 'cleaning',
@@ -377,10 +377,10 @@ angular.module('starter.controllers', [])
                 'startTime':'9:30',
                 'startDate':'11/22'
             },
-            9: {
+            19: {
                 'id'              : 19,
                 'user'            : 'forrest',
-                'img'             :'../img/person_4.png',
+                'img'             :'./img/person_4.png',
                 'jobname': 'clean garage out',
                 'pay': 35.00,
                 'category': 'cleaning',
@@ -391,10 +391,10 @@ angular.module('starter.controllers', [])
                 'startTime':'10:00am',
                 'startDate':'09/11'
             },
-            10: {
+            20: {
                 'id'              : 20,
                 'user'            : 'dexter',
-                'img'             :'../img/person_4.png',
+                'img'             :'./img/person_4.png',
                 'jobname': 'wash boat',
                 'pay': 10.00,
                 'category': 'cleaning',
@@ -472,7 +472,7 @@ angular.module('starter.controllers', [])
     window.localStorage.adultAccountInfo = JSON.stringify(adultData);
     window.localStorage.childAccountInfo = JSON.stringify(childData);
     window.localStorage.jobs = JSON.stringify(jobs);
-    window.localStorage.jobsCount = 4;
+    window.localStorage.jobsCount = 20;
 
     //Checking if user is logged in
     //So as to display the correct side menu options
@@ -490,7 +490,7 @@ angular.module('starter.controllers', [])
     }
 
 })
-.controller('LoginCtrl', function($scope, $state, $rootScope) {
+.controller('LoginCtrl', function($scope, $state, $rootScope, $ionicPopup) {
   $scope.userTypes = [
     {text: "Child", value:'child'},
     {text: "Adult", value:'adult'}
@@ -506,7 +506,11 @@ angular.module('starter.controllers', [])
     }
 
     if(loginInfo[username] === undefined){
-      alert("no such user");
+      $ionicPopup.alert({ 
+        title: 'No user with that username found.', 
+        // template: error, 
+        buttons: [{text:'OK', type: 'button-royal'}] 
+      });
     } else {
       if(loginInfo[username].password === password){
         window.localStorage.userType = $scope.data.userType;
@@ -517,11 +521,16 @@ angular.module('starter.controllers', [])
         if($scope.data.userType === "adult"){
           $rootScope.isAdult = true;
         }
-      if(window.localStorage.userName){
-          $rootScope.isNotLoggedIn = false;
-      }
+        if(window.localStorage.userName){
+            $rootScope.isNotLoggedIn = false;
+        }
         $state.go("profile");
       } else {
+        $ionicPopup.alert({ 
+        title: 'Incorrect password for that username.', 
+        // template: error, 
+        buttons: [{text:'OK', type: 'button-royal'}] 
+      });
         alert("Wrong password");
       }
     }

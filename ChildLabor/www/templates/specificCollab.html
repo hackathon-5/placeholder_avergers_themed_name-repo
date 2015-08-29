@@ -1,15 +1,21 @@
-<ion-view view-title="Add New Opportunity">
+<ion-view view-title="Current Collab">
   <ion-nav-buttons side="left">
     <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
     </button>
   </ion-nav-buttons>
   <ion-content>
   	<h1>Collab</h1>
-  	<ion-item ng-repeat="(key, value) in userCollabInfo" ng-hide="key== 'currentCount'">
-  		<!-- <ion-item ng-repeat="secondKey in value"> -->
-			{{value}}
-  		<!-- </ion-item> -->
-  	</ion-item>
-  	<button class="cancel-collab" ng-click="cancelCollab()">Cancel Collab</button>
+  	<ion-list class="info-container">
+	  	<img class="info-img" ng-src="{{userCollabInfo.img}}">
+	  	<label class="name">{{userCollabInfo.user}}</label>
+	    <label>{{userCollabInfo.jobname}}</label>
+	    <label>Pay/hours: ${{userCollabInfo.pay}}/hr for {{userCollabInfo.hours}}</label>
+	    <label>Category: {{userCollabInfo.category}}</label>
+	    <label>{{userCollabInfo.address}}</label>
+	    <label>{{userCollabInfo.extraInfo}}</label>
+	    <label>Age Restriction: {{userCollabInfo.ageRestriction}}</label>
+	    <label>{{userCollabInfo.startDate}}-{{userCollabInfo.startTime}}</label>
+	  	<button class="cancel-collab" ng-click="cancelCollab()">Cancel Collab</button>
+  	</ion-list>
   </ion-content>
 </ion-view>
