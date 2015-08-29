@@ -15,6 +15,59 @@
       'password':'pass4test'
     }
   };
+
+    var jobs = {
+        'job1':{
+            'jobname'         : 'Change oil in 1998 VW Golf',
+            'pay'             : 10.00,
+            'category'        : 'automotive',
+            'address'         : '4807 Boulevard Lane',
+            'hours'           : 2,
+            'prereq'          : 'none',
+            'tools_needed'    : 'none',
+            'tools_wanted'    : 'none',
+            'extra_info'      : 'Wear clothes that can get dirty',
+            'age_restriction' : 'none'
+        },
+        'job2':{
+            'jobname'         : 'Replace Shingle',
+            'pay'             : 15.00,
+            'category'        : 'home repair',
+            'address'         : '1251 Springhill Rd',
+            'hours'           : 3,
+            'prereq'          : 'none',
+            'tools_needed'    : 'none',
+            'tools_wanted'    : 'none',
+            'extra_info'      : 'Wear clothes that can get dirty',
+            'age_restriction' : 16
+        },
+        'job3':{
+            'jobname'         : 'Make webpage',
+            'pay'             : 20.00,
+            'category'        : 'computers',
+            'address'         : '145 Williman St',
+            'hours'           : 3,
+            'prereq'          : 'Web development',
+            'tools_needed'    : 'none',
+            'tools_wanted'    : 'none',
+            'extra_info'      : 'I need a webpage to show off my cats',
+            'age_restriction' : 'none'
+        },
+        'job4': {
+            'jobname': 'as',
+            'pay': 20.00,
+            'category': 'computers',
+            'address': '145 Williman St',
+            'hours': 3,
+            'prereq': 'Web development',
+            'tools_needed': 'none',
+            'tools_wanted': 'none',
+            'extra_info': 'I need a webpage to show off my cats',
+            'age_restriction': 'none'
+        }
+    };
+
+  window.localStorage.jobs = JSON.stringify(jobs);
   window.localStorage.loginInformation = JSON.stringify(testData);
 })
 .controller('LoginCtrl', function($scope, $state) {
@@ -49,15 +102,16 @@
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+.controller('PlaylistsCtrl', function() {
+          return {
+              all: function () {
+                  var projectString = window.localStorage['jobs'['jobname']];
+                  if (projectString) {
+                      return angular.fromJson(projectString);
+                  }
+                  return [];
+              }
+          }
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
