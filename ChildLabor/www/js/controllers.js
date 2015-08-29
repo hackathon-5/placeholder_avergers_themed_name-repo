@@ -145,6 +145,7 @@ angular.module('starter.controllers', [])
   ];
   $scope.data = {userType: "child"};
 
+
   $scope.register = function (username, email, password, address, firstName, lastName) {
       if ($scope.data.userType === "adult") {
           loginType = "adultAccountInfo";
@@ -171,6 +172,13 @@ angular.module('starter.controllers', [])
       $state.go("profile");
   };
 })
+.controller('OpportunitiesCtrl', function($scope) {
+  var alljobs = window.localStorage.jobs;
+  if(alljobs) {
+      $scope.jobs = angular.fromJson(alljobs);
+  }
+  return [];
+})
 
 .controller('ProfileCtrl', function($scope, $state) {
   var userType = window.localStorage.userType;
@@ -184,19 +192,18 @@ angular.module('starter.controllers', [])
   console.log($scope.user);
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  var alljobs = window.localStorage.jobs;
-  if(alljobs) {
-    $scope.jobs = angular.fromJson(alljobs);
-    console.log($scope.jobs);
-  }
-  return [];
-})
 .controller('AddOpportunityCtrl', function($scope, $state) {
 
 })
+
 .controller('JobDescriptionCtrl', function($scope, $stateParams) {
-    console.log($stateParams.jobId);
+  console.log($stateParams.jobId);
+  var allinfo = window.localStorage.jobs;
+  if(allinfo) {
+      $scope.info = angular.fromJson(allinfo)[$stateParams.jobId];
+      console.log($scope.info);
+  }
+  return [];
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {

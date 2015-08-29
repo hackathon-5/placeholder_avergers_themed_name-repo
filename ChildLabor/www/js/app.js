@@ -61,10 +61,10 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/browse',
       templateUrl: 'templates/browse.html'
   })
-  .state('playlists', {
-    url: '/playlists',
-    templateUrl: 'templates/playlists.html',
-    controller: 'PlaylistsCtrl'
+  .state('opportunities', {
+    url: '/opportunities',
+    templateUrl: 'templates/opportunities.html',
+    controller: 'OpportunitiesCtrl'
   })
 
   .state('single', {
