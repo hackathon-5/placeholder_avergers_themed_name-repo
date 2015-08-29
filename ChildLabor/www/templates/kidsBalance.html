@@ -3,7 +3,20 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
     </ion-nav-buttons>
-    <ion-content>
-	{{currentBillsYall}}
+    <ion-content class="earnings">
+      <h2>Weekly Earnings</h2>
+      <div><span>Week 1</span><span>${{ currentBillsYall.week1 }}.00</span></div>
+      <div><span>Week 2</span><span>${{ currentBillsYall.week2 }}.00</span></div>
+      <div><span>Week 3</span><span>${{ currentBillsYall.week3 }}.00</span></div>
+      <div><span>Week 4</span><span>${{ currentBillsYall.week4 }}.00</span></div>
+      <h2>Monthly Earnings</h2>
+      <div><span>Febuary</span><span>${{ currentBillsYall.febuary }}.00</span></div>
+      <div><span>March</span><span>${{ currentBillsYall.march }}.00</span></div>
+      <div><span>April</span><span>${{ currentBillsYall.april }}.00</span></div>
+      <div><span>May</span><span>${{ currentBillsYall.june }}.00</span></div>
+      <div><span>June</span><span>${{ currentBillsYall.july }}.00</span></div>
+      <div><span>July</span><span>${{ currentBillsYall.august }}.00</span></div>
+      <h2>Yearly Earnings</h2>
+      <div><span>2015 Earnings</span><span>${{ currentBillsYall.year }}.00</span></div>
     </ion-content>
 </ion-view>
