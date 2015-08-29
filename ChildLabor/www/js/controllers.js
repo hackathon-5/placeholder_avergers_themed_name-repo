@@ -15,7 +15,7 @@ angular.module('starter.controllers', [])
       'address':'test st',
       'email':'test@test.com',
       'password':'pass4test',
-      'img':'../img/ionic.png',
+      'img':'../img/default-adult-img.png',
       'description': 'I love working on cars during the weekend.'
     }
   };
@@ -83,6 +83,7 @@ angular.module('starter.controllers', [])
       'address':'test st',
       'email': 'child@test.com',
       'password': 'pass4child',
+      'img': '../img/default-child-img.png',
       'description': 'I would love to help some w/ their programming side projects.'
     }
   };
@@ -109,7 +110,7 @@ angular.module('starter.controllers', [])
     } else {
       if(loginInfo[username].password === password){
         window.localStorage.userType = $scope.data.userType;
-        window.localStorage.userName = username; 
+        window.localStorage.userName = username;
         $state.go("profile");
       } else {
         alert("Wrong password");

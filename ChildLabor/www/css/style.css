@@ -154,3 +154,12 @@ ion-view ion-content div.scroll h1 {
       margin-top: 20px;
       font-style: normal !important;
   }
+
+  .profile-pic {
+    border: solid 5px #000;
+    border-radius: 110px;
+    text-align: left;
+    background-color: #fff;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
