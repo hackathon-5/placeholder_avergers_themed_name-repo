@@ -18,7 +18,7 @@
       <ion-item ng-repeat="job in jobs" href="#/jobdescription/{{job.id}}">
         <img class="job-img" ng-src="{{job.img}}" />
         <p class="job-name">{{job.jobname}}</p>
-        <p class="job-pay">{{job.hours}}/{{job.pay}}</p>
+        <p class="job-pay">{{job.hours}}hr/${{job.pay}}</p>
       </ion-item>
     </ion-list>
   </ion-content>
