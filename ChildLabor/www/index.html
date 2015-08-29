@@ -41,10 +41,16 @@
               Search
             </ion-item>
             <ion-item menu-close href="#/opportunites">
-              Browse
+              Browse{{isAdult}}
             </ion-item>
             <ion-item menu-close href="#/playlists">
-              Playlists
+              Playlists{{isChild}}
+            </ion-item>
+            <ion-item ng-show="{{isAdult}}"menu-close href="#/addOppurtunites">
+              List New Opportunities
+            </ion-item>
+            <ion-item ng-show="{{isChild}}"menu-close href="#/addOppurtunites">
+              Current Commitments
             </ion-item>
           </ion-list>
         </ion-content>
