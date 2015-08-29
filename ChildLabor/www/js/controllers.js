@@ -15,7 +15,7 @@ angular.module('starter.controllers', [])
       'address':'test st',
       'email':'test@test.com',
       'password':'pass4test',
-      'img':'../img/default-adult-img.png',
+      'img':'./img/default-adult-img.png',
       'description': 'I love working on cars during the weekend.'
     }
   };
@@ -26,7 +26,7 @@ angular.module('starter.controllers', [])
       'address':'test st',
       'email': 'child@test.com',
       'password': 'pass4child',
-      'img': '../img/default-child-img.png',
+      'img': './img/default-child-img.png',
       'description': 'I would love to help some w/ their programming side projects.'
     }
   };
@@ -36,7 +36,7 @@ angular.module('starter.controllers', [])
           1:{
             'id'              : 2,
             'user'            : 'test',
-            'img'             :'../img/ionic.png',
+            'img'             :'./img/ionic.png',
             'jobname'         : 'Replace Shingle',
             'pay'             : 15.00,
             'category'        : 'home repair',
@@ -59,7 +59,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
       1 : {
           'id': 1,
           'user': 'test',
-          'img':'../img/person_1.png',
+          'img':'./img/person_1.png',
           'jobname': 'Change oil in 1998 VW Golf',
           'pay': 10.00,
           'category': 'automotive',
@@ -73,7 +73,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
       3:{
           'id'              : 3,
           'user'            : 'test',
-          'img'             :'../img/person_3.png',
+          'img'             :'./img/person_3.png',
           'jobname'         : 'Make webpage',
           'pay'             : 20.00,
           'category'        : 'computers',
@@ -87,7 +87,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
       4: {
           'id'              : 4,
           'user'            : 'test',
-          'img'             :'../img/person_4.png',
+          'img'             :'./img/person_4.png',
           'jobname': 'as',
           'pay': 20.00,
           'category': 'computers',
@@ -279,11 +279,13 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
     delete $scope.jobs[$stateParams.jobId];
     window.localStorage.jobs = JSON.stringify($scope.jobs);
 
+    $state.go('currentCollaborations');
+
   };
 
 })
 
-.controller('SpecificCollabCtrl', function($scope, $stateParams) {
+.controller('SpecificCollabCtrl', function($scope, $stateParams, $state) {
   $scope.collabInfo = JSON.parse(window.localStorage.commitments);
   $scope.userCollabInfo = $scope.collabInfo[window.localStorage.userName][$stateParams.collabId];
 
@@ -297,6 +299,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
     delete $scope.collabInfo[window.localStorage.userName][$stateParams.collabId];
     window.localStorage.jobs = JSON.stringify($scope.jobs);
     window.localStorage.commitments = JSON.stringify($scope.collabInfo);
+    $state.go('opportunities');
   };
 
 });
