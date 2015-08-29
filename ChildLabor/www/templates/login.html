@@ -1,6 +1,6 @@
 <ion-view view-title="Login">
   <ion-content>
-    <h1>Login</h1>
+    <h1>Account Login</h1>
     <div>
       <label>Email</label>
       <input ng-model="email" type="email" placeholder="Email" />
@@ -8,8 +8,8 @@
       <input ng-model="password" type="password" placeholder="Password" />
     </div>
     <div>
-      <button ng-click="login(email, password)">Login</button>
-      <button ng-click="toRegisterPage()">Register</button>
+      <button class="register-btn" ng-click="toRegisterPage()">Register</button>
+      <button class="login-btn" ng-click="login(email, password)">Login</button>
     </div>
   </ion-content>
 </ion-view>
