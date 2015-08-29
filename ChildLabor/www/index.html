@@ -40,11 +40,14 @@
             <ion-item menu-close href="#/profile">
               Search
             </ion-item>
-            <ion-item menu-close href="#/opportunites">
-              Browse
+            <ion-item menu-close href="#/opportunities">
+              Opportunities
             </ion-item>
-            <ion-item menu-close href="#/playlists">
-              Playlists
+            <ion-item ng-show="isAdult"menu-close href="#/addOpportunity">
+              List New Opportunities
+            </ion-item>
+            <ion-item ng-show="isChild"menu-close href="#/addOppurtunity">
+              Current Commitments
             </ion-item>
           </ion-list>
         </ion-content>

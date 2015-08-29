@@ -1,0 +1,20 @@
+<ion-view view-title="Opportunities">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="opp-content">
+  <div class="home_banner">
+    <img src="../img/mowing.jpg" />
+    <span>Child Labor</span>
+    <img class="arrow" src="../img/arrow.png" />
+    <img class="arrow second" src="../img/arrow.png" />
+    <img class="arrow third" src="../img/arrow.png" />
+  </div>
+    <ion-list>
+      <ion-item ng-repeat="job in jobs" href="#/jobdescription/{{job.id}}">
+        {{job.jobname}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

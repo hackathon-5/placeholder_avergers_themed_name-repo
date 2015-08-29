@@ -51,21 +51,32 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/profile.html',
     controller: 'ProfileCtrl'
   })
+  .state('addOpportunity', {
+    url: '/addOpportunity',
+    templateUrl: 'templates/newOpportunity.html',
+    controller: 'AddOpportunityCtrl'
+  })
 
   .state('browse', {
       url: '/browse',
       templateUrl: 'templates/browse.html'
   })
-  .state('playlists', {
-    url: '/playlists',
-    templateUrl: 'templates/playlists.html',
-    controller: 'PlaylistsCtrl'
+  .state('opportunities', {
+    url: '/opportunities',
+    templateUrl: 'templates/opportunities.html',
+    controller: 'OpportunitiesCtrl'
   })
 
   .state('single', {
     url: '/playlists/:playlistId',
     templateUrl: 'templates/playlist.html',
     controller: 'PlaylistCtrl'
+  })
+
+  .state('jobdescription', {
+    url: '/jobdescription/:jobId',
+    templateUrl: 'templates/jobdescription.html',
+        controller: 'JobDescriptionCtrl'
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
