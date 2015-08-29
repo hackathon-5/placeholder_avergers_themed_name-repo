@@ -1,4 +1,4 @@
-  angular.module('starter.controllers', [])
+angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -8,8 +8,10 @@
   // listen for the $ionicView.enter event:
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-  var testData = {
+  var adultData = {
     'test':{
+      'firstName':'Test',
+      'lastName':'McTest',
       'address':'test st',
       'email':'test@test.com',
       'password':'pass4test'
@@ -71,16 +73,41 @@
     };
 
   window.localStorage.jobs = JSON.stringify(jobs);
-  window.localStorage.loginInformation = JSON.stringify(testData);
+
+  var childData = {
+    'testChild':{
+      'firstName':'Child',
+      'lastName':'McTest',
+      'address':'test st',
+      'email': 'child@test.com',
+      'password': 'pass4child',
+    }
+  };
+  window.localStorage.adultAccountInfo = JSON.stringify(adultData);
+  window.localStorage.childAccountInfo = JSON.stringify(childData);
 })
 .controller('LoginCtrl', function($scope, $state) {
+  $scope.userTypes = [
+    {text: "Child", value:'child'},
+    {text: "Adult", value:'adult'}
+  ];
+  $scope.data = {userType:"child"};
+
   $scope.login = function(username, password){
-    var testInfo = JSON.parse(window.localStorage.loginInformation);
-    if(testInfo[username] === ""){
+    var loginInfo = {};
+    if($scope.data.userType==="adult"){
+      loginInfo = JSON.parse(window.localStorage.adultAccountInfo);
+    } else {
+      loginInfo = JSON.parse(window.localStorage.childAccountInfo);
+    }
+
+    if(loginInfo[username] === undefined){
       alert("no such user");
     } else {
-      if(testInfo[username].password === password){
-        alert("loggedIn");
+      if(loginInfo[username].password === password){
+        window.localStorage.userType = $scope.data.userType;
+        window.localStorage.userName = username; 
+        $state.go("profile");
       } else {
         alert("Wrong password");
       }
@@ -93,17 +120,32 @@
 
 })
 .controller('RegisterCtrl', function($scope) {
-  $scope.register = function(username, email, password, address){
-    var loginInfo = JSON.parse(window.localStorage.loginInformation);
-    loginInfo[username] = {
-      'email': email,
-      'password': password,
-      'address': address,
-    };
-    window.localStorage.loginInformation = JSON.stringify(loginInfo);
-    console.log(JSON.parse(window.localStorage.loginInformation));
-  };
-})
+        $scope.userTypes = [
+            {text: "Child", value: 'child'},
+            {text: "Adult", value: 'adult'}
+        ];
+        $scope.data = {userType: "child"};
+
+        $scope.register = function (username, email, password, address, firstName, lastName) {
+            if ($scope.data.userType === "adult") {
+                loginType = "adultAccountInfo";
+            } else {
+                loginType = "childAccountInfo";
+            }
+            var loginInfo = JSON.parse(window.localStorage[loginType]);
+            loginInfo[username] = {
+                'firstName': firstName,
+                'lastName': lastName,
+                'email': email,
+                'password': password,
+                'address': address,
+            };
+            window.localStorage[loginType] = JSON.stringify(loginInfo);
+            window.localStorage.userType = $scope.data.userType;
+            window.localStorage.userName = username;
+            $state.go("profile");
+        };
+    })
 
       .controller('PlaylistsCtrl', function($scope) {
           var alljobs = window.localStorage['jobs'];
@@ -113,6 +155,18 @@
           }
           return [];
       })
+
+.controller('ProfileCtrl', function($scope, $state) {
+  var userType = window.localStorage.userType;
+  var type = "";
+  if(userType==="adult"){
+    type = "adultAccountInfo";
+  } else {
+    type = "childAccountInfo";
+  }
+  $scope.user = JSON.parse(window.localStorage[type])[window.localStorage.userName];
+  console.log($scope.user);
+})
 
       .controller('PlaylistCtrl', function($scope, $stateParams) {
       });

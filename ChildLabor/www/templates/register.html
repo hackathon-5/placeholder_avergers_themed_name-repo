@@ -8,12 +8,15 @@
     <div>
 <!--       <label>Username</label> -->
       <input ng-model="username" type="text" placeholder="Username" />
+      <input ng-model="firstName" type="text" placeholder="First Name" />
+      <input ng-model="lastName" type="text" placeholder="Last Name" />
 <!--       <label>Email</label> -->
       <input ng-model="email" type="email" placeholder="Email" />
 <!--       <label>Password</label> -->
       <input ng-model="password" type="password" placeholder="Password" />
 <!--       <label>Address</label> -->
       <input ng-model="address" type="text" placeholder="Address" />
+      <ion-radio ng-repeat="type in userTypes" ng-model="data.userType" ng-value="type.value">{{type.text}}</ion-radio>
     </div>
     <div>
       <button class="register-page-btn" ng-click="register(username, email, password, address)">Register</button>

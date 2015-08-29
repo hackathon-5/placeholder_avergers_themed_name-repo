@@ -6,14 +6,13 @@
   <ion-content>
     <h1>Account Login</h1>
     <div>
-      <label>Username</label>
       <input ng-model="username" type="text" placeholder="Username" />
-      <label>Password</label>
       <input ng-model="password" type="password" placeholder="Password" />
+      <ion-radio class="login-radio" ng-repeat="type in userTypes" ng-model="data.userType" ng-value="type.value">{{type.text}}</ion-radio>
     </div>
     <div>
       <button class="register-btn" ng-click="toRegisterPage()">Register</button>
-      <button class="login-btn" ng-click="login(email, password)">Login</button>
+      <button class="login-btn" ng-click="login(username, password)">Login</button>
     </div>
   </ion-content>
 </ion-view>

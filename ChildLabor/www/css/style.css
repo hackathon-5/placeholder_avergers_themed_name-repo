@@ -90,7 +90,7 @@ ion-view ion-content div.scroll h1 {
     display: block;
     margin-bottom: -5px;
     font-style: italic;
-    display: none;
+/*    display: none;*/
   }
 
   ion-view ion-content div.scroll input {
@@ -110,7 +110,7 @@ ion-view ion-content div.scroll h1 {
     font-size: 18px;
     border: none;
     float: left;
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   .register-btn {
@@ -121,7 +121,7 @@ ion-view ion-content div.scroll h1 {
     font-size: 18px;
     border: none;
     float: right;
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   .register-page-btn {
@@ -133,4 +133,24 @@ ion-view ion-content div.scroll h1 {
     border: none;
     margin-top: 10px;
     width: 100%;
+  }
+
+  .login-radio {
+    width: 50%;
+    float: left;
+    border: none;
+    font-size: 18px !important;
+  }
+
+  i.radio-icon {
+    font-size: 18px !important;
+    right: 20px !important;
+    top: 3px !important;
+    color: #33AD33;
+  }
+
+  .profile-content label {
+      text-align: left;
+      margin-top: 20px;
+      font-style: normal !important;
   }
