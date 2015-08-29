@@ -19,6 +19,63 @@ angular.module('starter.controllers', [])
       'description': 'I love working on cars during the weekend.'
     }
   };
+
+    var jobs = {
+            1 : {
+                'jobname': 'Change oil in 1998 VW Golf',
+                'pay': 10.00,
+                'category': 'automotive',
+                'address': '4807 Boulevard Lane',
+                'hours': 2,
+                'prereq': 'none',
+                'tools_needed': 'none',
+                'tools_wanted': 'none',
+                'extra_info': 'Wear clothes that can get dirty',
+                'age_restriction': 'none'
+        },
+        2:{
+            'id'              : 2,
+            'jobname'         : 'Replace Shingle',
+            'pay'             : 15.00,
+            'category'        : 'home repair',
+            'address'         : '1251 Springhill Rd',
+            'hours'           : 3,
+            'prereq'          : 'none',
+            'tools_needed'    : 'none',
+            'tools_wanted'    : 'none',
+            'extra_info'      : 'Wear clothes that can get dirty',
+            'age_restriction' : 16
+        },
+        3:{
+            'id'              : 3,
+            'jobname'         : 'Make webpage',
+            'pay'             : 20.00,
+            'category'        : 'computers',
+            'address'         : '145 Williman St',
+            'hours'           : 3,
+            'prereq'          : 'Web development',
+            'tools_needed'    : 'none',
+            'tools_wanted'    : 'none',
+            'extra_info'      : 'I need a webpage to show off my cats',
+            'age_restriction' : 'none'
+        },
+        4: {
+            'id'              : 4,
+            'jobname': 'as',
+            'pay': 20.00,
+            'category': 'computers',
+            'address': '145 Williman St',
+            'hours': 3,
+            'prereq': 'Web development',
+            'tools_needed': 'none',
+            'tools_wanted': 'none',
+            'extra_info': 'I need a webpage to show off my cats',
+            'age_restriction': 'none'
+            }
+    };
+
+  window.localStorage.jobs = JSON.stringify(jobs);
+
   var childData = {
     'testChild':{
       'firstName':'Child',
@@ -31,7 +88,6 @@ angular.module('starter.controllers', [])
   };
   window.localStorage.adultAccountInfo = JSON.stringify(adultData);
   window.localStorage.childAccountInfo = JSON.stringify(childData);
-
 })
 .controller('LoginCtrl', function($scope, $state) {
   $scope.userTypes = [
@@ -67,32 +123,42 @@ angular.module('starter.controllers', [])
 
 })
 .controller('RegisterCtrl', function($scope) {
-  $scope.userTypes = [
-    {text: "Child", value:'child'},
-    {text: "Adult", value:'adult'}
-  ];
-  $scope.data = {userType:"child"};
+        $scope.userTypes = [
+            {text: "Child", value: 'child'},
+            {text: "Adult", value: 'adult'}
+        ];
+        $scope.data = {userType: "child"};
 
-  $scope.register = function(username, email, password, address, firstName, lastName){
-    if($scope.data.userType==="adult"){
-      loginType = "adultAccountInfo";
-    } else {
-      loginType = "childAccountInfo";
-    }
-    var loginInfo = JSON.parse(window.localStorage[loginType]);
-    loginInfo[username] = {
-      'firstName':firstName,
-      'lastName':lastName,
-      'email': email,
-      'password': password,
-      'address': address,
-    };
-    window.localStorage[loginType] = JSON.stringify(loginInfo);
-    window.localStorage.userType = $scope.data.userType;
-    window.localStorage.userName = username; 
-    $state.go("profile");
-  };
-})
+        $scope.register = function (username, email, password, address, firstName, lastName) {
+            if ($scope.data.userType === "adult") {
+                loginType = "adultAccountInfo";
+            } else {
+                loginType = "childAccountInfo";
+            }
+            var loginInfo = JSON.parse(window.localStorage[loginType]);
+            loginInfo[username] = {
+                'firstName': firstName,
+                'lastName': lastName,
+                'email': email,
+                'password': password,
+                'address': address,
+            };
+            window.localStorage[loginType] = JSON.stringify(loginInfo);
+            window.localStorage.userType = $scope.data.userType;
+            window.localStorage.userName = username;
+            $state.go("profile");
+        };
+    })
+
+      .controller('PlaylistsCtrl', function($scope) {
+          var alljobs = window.localStorage['jobs'];
+          if(alljobs) {
+              $scope.jobs = angular.fromJson(alljobs);
+              console.log($scope.jobs);
+          }
+          return [];
+      })
+
 .controller('ProfileCtrl', function($scope, $state) {
   var userType = window.localStorage.userType;
   var type = "";
@@ -105,17 +171,5 @@ angular.module('starter.controllers', [])
   console.log($scope.user);
 })
 
-
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+      .controller('PlaylistCtrl', function($scope, $stateParams) {
+      });
