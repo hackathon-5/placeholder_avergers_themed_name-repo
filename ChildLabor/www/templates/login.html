@@ -6,9 +6,7 @@
   <ion-content>
     <h1>Account Login</h1>
     <div>
-      <label>Username</label>
       <input ng-model="username" type="text" placeholder="Username" />
-      <label>Password</label>
       <input ng-model="password" type="password" placeholder="Password" />
       <ion-radio ng-repeat="type in userTypes" ng-model="data.userType" ng-value="type.value">{{type.text}}</ion-radio>
     </div>

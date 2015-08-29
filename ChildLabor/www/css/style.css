@@ -90,7 +90,7 @@ ion-view ion-content div.scroll h1 {
     display: block;
     margin-bottom: -5px;
     font-style: italic;
-    display: none;
+/*    display: none;*/
   }
 
   ion-view ion-content div.scroll input {
