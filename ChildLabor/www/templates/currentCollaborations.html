@@ -3,7 +3,7 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
     </ion-nav-buttons>
-    <ion-content>
+    <ion-content class="current-collab">
         <ion-list>
             <ion-item ng-repeat="(firstKey, firstValue) in childCommits" href="#/specificCollab/{{firstKey}}" ng-hide="firstKey == 'currentCount'">
                 {{firstValue.jobname}} | {{firstValue.startDate}} - {{firstValue.startTime}}

@@ -236,7 +236,7 @@ ion-view ion-content div.scroll h1 {
 
   .direction.third {
     left: auto;
-    right: 5.5%;
+    right: 2.5%;
   }
 
   .main_banner {
@@ -266,4 +266,49 @@ ion-view ion-content div.scroll h1 {
     margin-right: -13%;
     margin-top: 4%;
     width: 20%;
+  }
+
+  .select-category {
+    font-size: 18px !important;
+    margin-bottom: 10px !important;
+    text-align: left;
+  }
+
+  .select-category.additional {
+    margin-top: 15px;
+    margin-bottom: -15px !important;
+  }
+
+  .category-select {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .additional-info {
+      margin-top: 30px;
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 15px;
+  }
+
+  .current-collab ion-item {
+    border-radius: 20px;
+    border: none;
+  }
+
+  .opp-content {
+    background: #555;
+  }
+
+  .cancel-collab {
+    background: #ed1b2f;
+    padding: 10px 12%;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    margin-top: 30px;
+    width: 100%;
   }
