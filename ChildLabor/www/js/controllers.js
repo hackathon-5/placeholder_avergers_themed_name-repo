@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+  angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -8,36 +8,44 @@ angular.module('starter.controllers', [])
   // listen for the $ionicView.enter event:
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-
-  // Form data for the login modal
-  $scope.loginData = {};
-
-  // Create the login modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/login.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
-
-  // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
-    $scope.modal.hide();
+  var testData = {
+    'test':{
+      'address':'test st',
+      'email':'test@test.com',
+      'password':'pass4test'
+    }
+  };
+  window.localStorage.loginInformation = JSON.stringify(testData);
+})
+.controller('LoginCtrl', function($scope, $state) {
+  $scope.login = function(username, password){
+    var testInfo = JSON.parse(window.localStorage.loginInformation);
+    if(testInfo[username] === ""){
+      alert("no such user");
+    } else {
+      if(testInfo[username].password === password){
+        alert("loggedIn");
+      } else {
+        alert("Wrong password");
+      }
+    }
   };
 
-  // Open the login modal
-  $scope.login = function() {
-    $scope.modal.show();
+  $scope.toRegisterPage = function(){
+    $state.go("register");
   };
 
-  // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
+})
+.controller('RegisterCtrl', function($scope) {
+  $scope.register = function(username, email, password, address){
+    var loginInfo = JSON.parse(window.localStorage.loginInformation);
+    loginInfo[username] = {
+      'email': email,
+      'password': password,
+      'address': address,
+    };
+    window.localStorage.loginInformation = JSON.stringify(loginInfo);
+    console.log(JSON.parse(window.localStorage.loginInformation));
   };
 })
 

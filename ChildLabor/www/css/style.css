@@ -1,1 +1,49 @@
 /* Empty. Add your own CSS if you like */
+
+body {
+  font-family: Raleway !important;
+}
+
+ion-content {
+  background: #e6ebeb;
+}
+
+.bar.bar-stable .title {
+  font-family: Amatic SC;
+  color: #fff;
+  font-size: 34px;
+  margin-top: 4px;
+  text-shadow: 1px 1px 1px #428eb3;
+}
+
+.bar-stable .button.button-icon {
+  margin-top: 2px;
+}
+
+[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+  background: #555;
+  height: 55px;
+  position: fixed;
+/*  box-shadow: 0px 0px 4px 0px #111;*/
+}
+
+.bar-stable .button.button-icon {
+  color: #fff;
+}
+
+.bar.bar-stable {
+  background: #888;
+  height: 55px;
+}
+
+ion-header-bar.bar.bar-stable.bar-header h1 {
+  font-family: Raleway;
+  font-weight: bold;
+  text-shadow: none;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.menu-open .bar-stable .button.button-icon {
+  color: #33AD33;
+}
