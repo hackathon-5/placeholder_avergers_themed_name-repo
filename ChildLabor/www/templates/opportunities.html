@@ -6,7 +6,10 @@
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="job in jobs" href="#/jobdescription/{{job.id}}">
+        <img ng-src="{{job.img}}" />
         {{job.jobname}}
+        {{job.hours}}
+        {{job.pay}}
       </ion-item>
     </ion-list>
   </ion-content>
