@@ -38,10 +38,10 @@
             <ion-item ng-show="isNotLoggedIn" menu-close href="#/login">
               Login
             </ion-item>
-            <ion-item menu-close href="#/profile">
+            <ion-item ng-show="!isNotLoggedIn" menu-close href="#/profile">
               Profile
             </ion-item>
-            <ion-item menu-close href="#/opportunities">
+            <ion-item ng-show="!isNotLoggedIn" menu-close href="#/opportunities">
               Opportunities
             </ion-item>
             <ion-item ng-show="isAdult" menu-close href="#/addOpportunity">

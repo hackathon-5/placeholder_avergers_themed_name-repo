@@ -74,7 +74,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
       2:{
           'id'              : 2,
           'user'            : 'test',
-          'img'             :'../img/ionic.png',
+          'img'             :'../img/person_2.png',
           'jobname'         : 'Replace Shingle',
           'pay'             : 15.00,
           'category'        : 'home repair',
@@ -177,6 +177,8 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
 .controller('LogoutCtrl', function($scope, $state, $rootScope) {
 
     $scope.logout = function(){
+        $rootScope.isChild = false;
+        $rootScope.isAdult = false;
     window.localStorage.userType = "";
     window.localStorage.userName = "";
     $rootScope.isNotLoggedIn = true;
