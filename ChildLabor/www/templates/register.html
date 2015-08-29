@@ -16,7 +16,7 @@
       <input ng-model="password" type="password" placeholder="Password" />
 <!--       <label>Address</label> -->
       <input ng-model="address" type="text" placeholder="Address" />
-      <ion-radio ng-repeat="type in userTypes" ng-model="data.userType" ng-value="type.value">{{type.text}}</ion-radio>
+      <ion-radio class="login-radio" ng-repeat="type in userTypes" ng-model="data.userType" ng-value="type.value">{{type.text}}</ion-radio>
     </div>
     <div>
       <button class="register-page-btn" ng-click="register(username, email, password, address)">Register</button>

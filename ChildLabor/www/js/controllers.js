@@ -27,7 +27,8 @@ angular.module('starter.controllers', [])
       'email': 'child@test.com',
       'password': 'pass4child',
       'img': '../img/default-child-img.png',
-      'description': 'I would love to help some w/ their programming side projects.'
+      'description': 'I would love to help some w/ their programming side projects.',
+      'balance' : 25.00
     }
   };
 
@@ -73,7 +74,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
       2:{
           'id'              : 2,
           'user'            : 'test',
-          'img'             :'../img/person_2.png',
+          'img'             :'../img/ionic.png',
           'jobname'         : 'Replace Shingle',
           'pay'             : 15.00,
           'category'        : 'home repair',
@@ -87,7 +88,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
       3:{
           'id'              : 3,
           'user'            : 'test',
-          'img'             :'../img/person_3.png',
+          'img'             :'../img/ionic.png',
           'jobname'         : 'Make webpage',
           'pay'             : 20.00,
           'category'        : 'computers',
@@ -174,6 +175,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
 })
 
 .controller('LogoutCtrl', function($scope, $state, $rootScope) {
+
     $scope.logout = function(){
     window.localStorage.userType = "";
     window.localStorage.userName = "";
@@ -183,7 +185,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
 })
 
 
-    .controller('RegisterCtrl', function($scope, $state, $rootScope) {
+.controller('RegisterCtrl', function($scope, $state, $rootScope) {
   $scope.userTypes = [
       {text: "Child", value: 'child'},
       {text: "Adult", value: 'adult'}
@@ -309,9 +311,29 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
     $scope.currentCollabs[window.localStorage.userName] = $scope.usersCollabs;
     window.localStorage.commitments = JSON.stringify($scope.currentCollabs);
 
+    //Delete job from jobs list
+    $scope.jobs = JSON.parse(window.localStorage.jobs);
+    delete $scope.jobs[$stateParams.jobId];
+    window.localStorage.jobs = JSON.stringify($scope.jobs);
+
   };
 
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-  });
+.controller('SpecificCollabCtrl', function($scope, $stateParams) {
+  $scope.collabInfo = JSON.parse(window.localStorage.commitments);
+  $scope.userCollabInfo = $scope.collabInfo[window.localStorage.userName][$stateParams.collabId];
+
+  $scope.cancelCollab = function(){
+    //Add the current collab to jobs
+    //use Id in collab to get id for job
+    //delete from current collabs
+
+    $scope.jobs = JSON.parse(window.localStorage.jobs);
+    $scope.jobs[$scope.userCollabInfo.id] = $scope.userCollabInfo;
+    delete $scope.collabInfo[window.localStorage.userName][$stateParams.collabId];
+    window.localStorage.jobs = JSON.stringify($scope.jobs);
+    window.localStorage.commitments = JSON.stringify($scope.collabInfo);
+  };
+
+});

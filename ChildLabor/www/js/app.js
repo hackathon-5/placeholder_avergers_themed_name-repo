@@ -27,6 +27,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   //   .state('app', {
   //   url: '/app',
+  // cache:false,
   //   abstract: true,
   //   templateUrl: 'templates/menu.html',
   //   controller: 'AppCtrl'
@@ -34,10 +35,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   .state('search', {
     url: '/search',
+    cache:false,
       templateUrl: 'templates/search.html'
   })
   .state('login', {
     url: '/login',
+    cache:false,
     templateUrl: 'templates/login.html',
     controller: 'LoginCtrl'
   })
@@ -51,28 +54,33 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   .state('register', {
     url: '/register',
+    cache:false,
     templateUrl: 'templates/register.html',
     controller: 'RegisterCtrl'
   })
   .state('profile', {
     url: '/profile',
+    cache:false,
     templateUrl: 'templates/profile.html',
     controller: 'ProfileCtrl'
   })
   .state('addOpportunity', {
     url: '/addOpportunity',
+    cache:false,
     templateUrl: 'templates/newOpportunity.html',
     controller: 'AddOpportunityCtrl'
   })
 
   .state('currentCollaborations', {
     url: '/currentCollaborations',
+    cache:false,
     templateUrl: 'templates/currentCollaborations.html',
     controller: 'CurrentCollaborationsCtrl'
   })
 
   .state('kidsBalance', {
     url: '/kidsBalance',
+    cache:false,
     templateUrl: 'templates/kidsBalance.html',
     controller: 'KidsBalanceCtrl'
   })
@@ -80,25 +88,35 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   .state('browse', {
       url: '/browse',
+      cache:false,
       templateUrl: 'templates/browse.html'
   })
   .state('opportunities', {
     url: '/opportunities',
+    cache:false,
     templateUrl: 'templates/opportunities.html',
     controller: 'OpportunitiesCtrl'
+  }) 
+  .state('specificCollab', {
+    url: '/specificCollab/:collabId',
+    cache:false,
+    templateUrl: 'templates/specificCollab.html',
+    controller: 'SpecificCollabCtrl'
   })
 
   .state('single', {
     url: '/playlists/:playlistId',
+    cache:false,
     templateUrl: 'templates/playlist.html',
     controller: 'PlaylistCtrl'
   })
 
   .state('jobdescription', {
     url: '/jobdescription/:jobId',
+    cache:false,
     templateUrl: 'templates/jobdescription.html',
         controller: 'JobDescriptionCtrl'
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/opportunities');
 });

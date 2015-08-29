@@ -4,12 +4,12 @@
     </button>
   </ion-nav-buttons>
   <ion-content class="profile-content">
-    <h1>Profile Page</h1>
+    <h1>My Profile</h1>
+    <img class="profile-pic" ng-src="{{user.img}}"/>
     <label>{{user.firstName}}</label>
     <label>{{user.lastName}}</label>
     <label>{{user.email}}</label>
     <label>{{user.address}}</label>
-    <img ng-src="{{user.img}}"/>
     <label>{{user.description}}</label>
   </ion-content>
 </ion-view>
