@@ -14,7 +14,9 @@ angular.module('starter.controllers', [])
       'lastName':'McTest',
       'address':'test st',
       'email':'test@test.com',
-      'password':'pass4test'
+      'password':'pass4test',
+      'img':'../img/ionic.png',
+      'description': 'I love working on cars during the weekend.'
     }
   };
 
@@ -81,6 +83,7 @@ angular.module('starter.controllers', [])
       'address':'test st',
       'email': 'child@test.com',
       'password': 'pass4child',
+      'description': 'I would love to help some w/ their programming side projects.'
     }
   };
   window.localStorage.adultAccountInfo = JSON.stringify(adultData);
