@@ -151,11 +151,10 @@ angular.module('starter.controllers', [])
         };
     })
 
-      .controller('PlaylistsCtrl', function($scope) {
+      .controller('OpportunitiesCtrl', function($scope) {
           var alljobs = window.localStorage['jobs'];
           if(alljobs) {
               $scope.jobs = angular.fromJson(alljobs);
-              console.log($scope.jobs);
           }
           return [];
       })
@@ -174,6 +173,12 @@ angular.module('starter.controllers', [])
 
     .controller('JobDescriptionCtrl', function($scope, $stateParams) {
         console.log($stateParams.jobId);
+        var allinfo = window.localStorage['jobs'];
+        if(allinfo) {
+            $scope.info = angular.fromJson(allinfo)[$stateParams.jobId];
+            console.log($scope.info);
+        }
+        return [];
     })
 
     .controller('PlaylistCtrl', function($scope, $stateParams) {
