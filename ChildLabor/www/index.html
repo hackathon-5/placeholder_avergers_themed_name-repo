@@ -35,7 +35,7 @@
         </ion-header-bar>
         <ion-content>
           <ion-list>
-            <ion-item menu-close href="#/login">
+            <ion-item ng-show="isNotLoggedIn" menu-close href="#/login">
               Login
             </ion-item>
             <ion-item menu-close href="#/profile">
@@ -53,7 +53,7 @@
             <ion-item ng-show="isChild" menu-close href="#/kidsBalance">
               Money Earned
             </ion-item>
-            <ion-item ng-show="isChild"menu-close href="#">
+            <ion-item ng-show="!isNotLoggedIn"menu-close href="#/logout">
               Logout
             </ion-item>
           </ion-list>

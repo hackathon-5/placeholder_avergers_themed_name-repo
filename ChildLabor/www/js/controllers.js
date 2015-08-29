@@ -27,7 +27,8 @@ angular.module('starter.controllers', [])
       'email': 'child@test.com',
       'password': 'pass4child',
       'img': './img/default-child-img.png',
-      'description': 'I would love to help some w/ their programming side projects.'
+      'description': 'I would love to help some w/ their programming side projects.',
+      'balance' : 25.00
     }
   };
 
@@ -70,6 +71,20 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
           'startTime':'6pm',
           'startDate':'08/30'
       },
+      2:{
+          'id'              : 2,
+          'user'            : 'test',
+          'img'             :'../img/ionic.png',
+          'jobname'         : 'Replace Shingle',
+          'pay'             : 15.00,
+          'category'        : 'home repair',
+          'address'         : '1251 Springhill Rd',
+          'hours'           : 3,
+          'extraInfo'      : 'Wear clothes that can get dirty',
+          'ageRestriction' : 16,
+          'startTime':'2pm',
+          'startDate':'09/30'
+      },
       3:{
           'id'              : 3,
           'user'            : 'test',
@@ -106,11 +121,15 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
     //So as to display the correct side menu options
     $rootScope.isChild = false;
     $rootScope.isAdult = false;
+    $rootScope.isNotLoggedIn = true;
     if(window.localStorage.userType === "child"){
       $rootScope.isChild = true;
     }
     if(window.localStorage.userType === "adult"){
       $rootScope.isAdult = true;
+    }
+    if(window.localStorage.userName){
+        $rootScope.isNotLoggedIn = false;
     }
 
 })
@@ -141,6 +160,9 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
         if($scope.data.userType === "adult"){
           $rootScope.isAdult = true;
         }
+      if(window.localStorage.userName){
+          $rootScope.isNotLoggedIn = false;
+      }
         $state.go("profile");
       } else {
         alert("Wrong password");
@@ -151,6 +173,18 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
     $state.go("register");
   };
 })
+
+.controller('LogoutCtrl', function($scope, $state, $rootScope) {
+
+    $scope.logout = function(){
+    window.localStorage.userType = "";
+    window.localStorage.userName = "";
+    $rootScope.isNotLoggedIn = true;
+    $state.go("login");
+    };
+})
+
+
 .controller('RegisterCtrl', function($scope, $state, $rootScope) {
   $scope.userTypes = [
       {text: "Child", value: 'child'},
@@ -181,6 +215,9 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
       }
       if($scope.data.userType === "adult"){
         $rootScope.isAdult = true;
+      }
+      if(window.localStorage.userName){
+          $rootScope.isNotLoggedIn = false;
       }
       $state.go("profile");
   };
