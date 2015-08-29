@@ -1,0 +1,15 @@
+<ion-view view-title="Add New Opportunity">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+  	<h1>Collab</h1>
+  	<ion-item ng-repeat="(key, value) in userCollabInfo" ng-hide="key== 'currentCount'">
+  		<!-- <ion-item ng-repeat="secondKey in value"> -->
+			{{value}}
+  		<!-- </ion-item> -->
+  	</ion-item>
+  	<button ng-click="cancelCollab()">Cancel Collab</button>
+  </ion-content>
+</ion-view>

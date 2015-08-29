@@ -69,20 +69,6 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
           'startTime':'6pm',
           'startDate':'08/30'
       },
-      2:{
-          'id'              : 2,
-          'user'            : 'test',
-          'img'             :'../img/ionic.png',
-          'jobname'         : 'Replace Shingle',
-          'pay'             : 15.00,
-          'category'        : 'home repair',
-          'address'         : '1251 Springhill Rd',
-          'hours'           : 3,
-          'extraInfo'      : 'Wear clothes that can get dirty',
-          'ageRestriction' : 16,
-          'startTime':'2pm',
-          'startDate':'09/30'
-      },
       3:{
           'id'              : 3,
           'user'            : 'test',
@@ -287,9 +273,29 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
     $scope.currentCollabs[window.localStorage.userName] = $scope.usersCollabs;
     window.localStorage.commitments = JSON.stringify($scope.currentCollabs);
 
+    //Delete job from jobs list
+    $scope.jobs = JSON.parse(window.localStorage.jobs);
+    delete $scope.jobs[$stateParams.jobId];
+    window.localStorage.jobs = JSON.stringify($scope.jobs);
+
   };
 
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-  });
+.controller('SpecificCollabCtrl', function($scope, $stateParams) {
+  $scope.collabInfo = JSON.parse(window.localStorage.commitments);
+  $scope.userCollabInfo = $scope.collabInfo[window.localStorage.userName][$stateParams.collabId];
+
+  $scope.cancelCollab = function(){
+    //Add the current collab to jobs
+    //use Id in collab to get id for job
+    //delete from current collabs
+
+    $scope.jobs = JSON.parse(window.localStorage.jobs);
+    $scope.jobs[$scope.userCollabInfo.id] = $scope.userCollabInfo;
+    delete $scope.collabInfo[window.localStorage.userName][$stateParams.collabId];
+    window.localStorage.jobs = JSON.stringify($scope.jobs);
+    window.localStorage.commitments = JSON.stringify($scope.collabInfo);
+  };
+
+});

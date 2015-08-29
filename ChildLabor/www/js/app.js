@@ -88,6 +88,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     cache:false,
     templateUrl: 'templates/opportunities.html',
     controller: 'OpportunitiesCtrl'
+  }) 
+  .state('specificCollab', {
+    url: '/specificCollab/:collabId',
+    cache:false,
+    templateUrl: 'templates/specificCollab.html',
+    controller: 'SpecificCollabCtrl'
   })
 
   .state('single', {
