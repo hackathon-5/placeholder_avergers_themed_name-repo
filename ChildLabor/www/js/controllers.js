@@ -32,8 +32,18 @@ angular.module('starter.controllers', [])
 
  var commitments = {
         1:{
-            'date' : 'sdf'
-
+            'id'              : 2,
+            'user'            : 'test',
+            'img'             :'../img/ionic.png',
+            'jobname'         : 'Replace Shingle',
+            'pay'             : 15.00,
+            'category'        : 'home repair',
+            'address'         : '1251 Springhill Rd',
+            'hours'           : 3,
+            'extraInfo'      : 'Wear clothes that can get dirty',
+            'ageRestriction' : 16,
+            'startTime':'2pm',
+            'startDate':'09/30'
         }
  };
 
