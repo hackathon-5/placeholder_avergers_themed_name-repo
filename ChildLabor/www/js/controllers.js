@@ -40,6 +40,11 @@ angular.module('starter.controllers', [])
     }, 1000);
   };
 })
+.controller('LoginCtrl', function($scope) {
+  $scope.login = function(email, password){
+    alert("Not Functional");
+  };
+})
 
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
