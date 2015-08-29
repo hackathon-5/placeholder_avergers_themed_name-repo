@@ -46,6 +46,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/register.html',
     controller: 'RegisterCtrl'
   })
+  .state('profile', {
+    url: '/profile',
+    templateUrl: 'templates/profile.html',
+    controller: 'ProfileCtrl'
+  })
 
   .state('browse', {
       url: '/browse',
