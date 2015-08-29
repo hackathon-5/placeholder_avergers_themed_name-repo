@@ -260,7 +260,7 @@ window.localStorage.childAccountInfo = JSON.stringify(childData);
 })
 
 
-.controller('JobDescriptionCtrl', function($scope, $stateParams) {
+.controller('JobDescriptionCtrl', function($scope, $stateParams, $state) {
   console.log($stateParams.jobId);
   $scope.info = JSON.parse(window.localStorage.jobs)[$stateParams.jobId];
 
