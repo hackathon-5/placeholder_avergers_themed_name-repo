@@ -8,7 +8,7 @@
     <div>
       <input ng-model="username" type="text" placeholder="Username" />
       <input ng-model="password" type="password" placeholder="Password" />
-      <ion-radio ng-repeat="type in userTypes" ng-model="data.userType" ng-value="type.value">{{type.text}}</ion-radio>
+      <ion-radio class="login-radio" ng-repeat="type in userTypes" ng-model="data.userType" ng-value="type.value">{{type.text}}</ion-radio>
     </div>
     <div>
       <button class="register-btn" ng-click="toRegisterPage()">Register</button>
